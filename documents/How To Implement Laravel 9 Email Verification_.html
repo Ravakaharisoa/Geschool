@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="clckd" content="56a7f627c53f029fd7929d499a343ed9">
+    <script src="./How To Implement Laravel 9 Email Verification__files/f.txt"></script><script src="./How To Implement Laravel 9 Email Verification__files/f(1).txt"></script><script src="./How To Implement Laravel 9 Email Verification__files/f(2).txt" id="google_shimpl"></script><script src="./How To Implement Laravel 9 Email Verification__files/358586736427841" async=""></script><script async="" src="./How To Implement Laravel 9 Email Verification__files/fbevents.js.téléchargement"></script><script type="text/javascript" async="" src="./How To Implement Laravel 9 Email Verification__files/analytics.js.téléchargement"></script><script type="text/javascript" async="" src="./How To Implement Laravel 9 Email Verification__files/js"></script><script async="" src="./How To Implement Laravel 9 Email Verification__files/js(1)"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161003041-3');
+    </script>
+    
+	        
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <!-- Primary Meta Tags -->
+                                    <title>How To Implement Laravel 9 Email Verification?</title>
+                            <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+        <link rel="canonical" href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification">
+        <meta name="author" content="Code And Deploy">
+                <meta name="title" content="How To Implement Laravel 9 Email Verification?">
+                <meta name="description" content="I will show you how to implement email verification for your Laravel 8, and 9 projects. After a user registers to your application we need to verify it via email.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification">
+                    <meta property="og:title" content="How To Implement Laravel 9 Email Verification?">
+                <meta property="og:description" content="I will show you how to implement email verification for your Laravel 8, and 9 projects. After a user registers to your application we need to verify it via email.">
+                    <meta property="og:image" content="https://ecn-storage.s3.us-west-2.amazonaws.com/articles/how-to-implement-laravel-8-email-verificationx980.webp">
+            <meta property="og:image:width" content="850">
+            <meta property="og:image:height" content="400">
+        
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification">
+
+                    <meta property="twitter:title" content="How To Implement Laravel 9 Email Verification?">
+        
+
+        <meta property="twitter:description" content="I will show you how to implement email verification for your Laravel 8, and 9 projects. After a user registers to your application we need to verify it via email.">
+                    <meta property="twitter:image" content="https://ecn-storage.s3.us-west-2.amazonaws.com/articles/how-to-implement-laravel-8-email-verificationx980.webp">
+        
+        <!-- CSRF Token -->
+                    <meta property="article:handle" content="how-to-implement-laravel-8-email-verification">
+                <meta name="csrf-token" content="YkaRWeGhgtNLkY6XOSZT1rV4TtDMWMFb4KZ24ggF">
+                    <meta property="article:section" content="Blog">
+                            <meta property="article:published_time" content="2021-08-29 04:57:16">
+                            <meta property="article:modified_time" content="2022-05-31 03:11:13">
+        
+                                    <meta property="article:tag" content="How To">
+                            <meta property="article:tag" content="laravel">
+                            <meta property="article:tag" content="Authentication">
+                    
+                <script type="application/ld+json">
+            {
+                "@context":"http://schema.org",
+                "@type":"Article",
+                "mainEntityOfPage":{
+                    "@type":"WebPage",
+                    "@id":"https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification"
+                },
+                "url":"https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification",
+                "image":
+                [
+                    "https://ecn-storage.s3.us-west-2.amazonaws.com/articles/how-to-implement-laravel-8-email-verificationx980.webp"
+                ],
+                "publisher":
+                {
+                    "@context":"http://schema.org",
+                    "@type":"Organization",
+                    "name":"Code And Deploy Community",
+                    "logo":{
+                        "@context":"http://schema.org",
+                        "@type":"ImageObject",
+                        "url":"https://codeanddeploy.com/theme/landing/img/favicon.png","width":"192","height":"192"
+                    }
+                },
+                "headline":"How To Implement Laravel 9 Email Verification?",
+                "author":{
+                    "@context":"http://schema.org",
+                    "@type":"Person",
+                    "url":"https://codeanddeploy.com/admin",
+                    "name":"Code And Deploy"
+                },
+                "datePublished":"2021-08-29 04:57:16",
+                "dateModified":"2022-05-31 03:11:13"
+            }
+        </script>
+        
+        <!-- Favicons -->
+        <link href="https://codeanddeploy.com/theme/landing/img/favicon.png" rel="icon">
+        <link href="https://codeanddeploy.com/theme/landing/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <link href="./How To Implement Laravel 9 Email Verification__files/css2" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="./How To Implement Laravel 9 Email Verification__files/styles.min.css">
+    
+                                        <link rel="stylesheet" href="./How To Implement Laravel 9 Email Verification__files/prism.css">
+                        
+                
+            <meta name="facebook-domain-verification" content="lgxlky0mlnvdll8fqums33dinhsgrt">
+        <meta name="google-site-verification" content="G-sgTjhTs139I2aZcXHxoDRNYMbiR21ylbm8Nk-aEMk">
+        <meta name="p:domain_verify" content="970e1c024b81687c90c0f4a6f7cedb5c">
+        <script async="" src="./How To Implement Laravel 9 Email Verification__files/f(3).txt" crossorigin="anonymous" data-checked-head="true"></script>
+
+        <!-- Meta Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '358586736427841');
+            fbq('track', 'PageView');
+
+            
+                    </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=358586736427841&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+
+
+        
+            <meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A4A26Ymj79UVY7C7JGUS4BG1s7MdcDokAQf/RP0paks+RoTYbXHxceT/5L4iKcsleFCngi75YfNRGW2+SpVv1ggAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><style>.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row;padding:0}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;padding:0;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em;padding:0}.swal2-popup.swal2-toast .swal2-styled{margin:.125em .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(100,150,200,.5)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:5px;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center;padding:0 1.8em}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0;padding:0 1.6em}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#2778c4;color:#fff;font-size:1.0625em}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#d14529;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#757575;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0 1.6em;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto}.swal2-validation-message{display:none;align-items:center;justify-content:center;margin:0 -2.7em;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1;zoom:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;zoom:1;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;zoom:1;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;zoom:1;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;zoom:1;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;zoom:1;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}</style><link rel="preload" href="./How To Implement Laravel 9 Email Verification__files/f(4).txt" as="script"><script type="text/javascript" src="./How To Implement Laravel 9 Email Verification__files/f(4).txt"></script><link rel="preload" href="./How To Implement Laravel 9 Email Verification__files/f(5).txt" as="script"><script type="text/javascript" src="./How To Implement Laravel 9 Email Verification__files/f(5).txt"></script></head>
+
+	<body class="font-sans bg-gray-background text-gray-900 text-base" aria-hidden="false" style="padding: 154px 0px 0px;">
+
+		<div class="preloader">
+			<svg class="preloader-circular" viewBox="25 25 50 50">
+				<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+			</svg>
+		</div>
+		<!-- ============================================================== -->
+		<!-- Container fluid  -->
+		<!-- ============================================================== -->
+		<div class="landing-page">
+
+			<header id="header" class="w-full bg-head-900 header-scrolled">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav>
+        <div class="mx-auto px-2 sm:px-6 lg:px-6">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex items-center justify-center mr-3 lg:mr-0 sm:mr-0">
+                                    </div>
+                <div class="flex-1 flex items-center sm:items-stretch sm:justify-start">
+                    <a href="https://codeanddeploy.com/">
+                        <div class="flex-shrink-0 flex items-center">
+                            <img class="h-8 mt-1" src="./How To Implement Laravel 9 Email Verification__files/logo.png" alt="Code And Deploy Logo" height="16px">
+                        </div>
+                    </a>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <a href="https://codeanddeploy.com/" class="text-white hover:text-gray-300 px-2 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out" aria-current="page">HOME</a>
+
+                            <a href="https://codeanddeploy.com/category/php" class="text-white hover:text-gray-300 px-2 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out">PHP</a>
+
+                            <a href="https://codeanddeploy.com/category/laravel" class="text-white hover:text-gray-300 px-2 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out">LARAVEL</a>
+
+                            <a href="https://codeanddeploy.com/category/jquery" class="text-white hover:text-gray-300 px-2 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out">JQUERY</a>
+
+                            <!-- <a href="/category/css" class="text-white hover:text-gray-300 px-2 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out">CSS</a> -->
+                        
+                            <a href="https://codeanddeploy.com/dofree100?utm_source=codeanddeploy&amp;utm_medium=header&amp;utm_id=do100freecredit" target="_blank" rel="nofollow" class="link-header-banner text-white hover:text-gray-300 px-2 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out link-header-banner1">FREE $100 HOSTING CREDIT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                            
+                                        <!-- Mobile menu dropdown -->
+                     <div class="ml-3 relative dropdown dropselect block sm:hidden">
+                        <button type="button" class="dropdown-toggle text-gray-200 flex text-base rounded-lg hover:text-gray-400 focus:outline-none focus:text-gray-100 transition duration-150 ease-in-out" data-toggle="dropdown" id="MobileMenuDropdown" aria-expanded="false">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                            </svg>
+                        </button>
+                        <div id="MobileMenuDropdown" class="dropdown-menu dropdown-menu-right origin-top-right absolute right-0 mt-2 z-50 w-72 transform-gpu -translate-x-48 translate-y-5 rounded-xl py-3 bg-white shadow-dialog" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" x-placement="bottom-start">
+                            <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="https://codeanddeploy.com/">HOME</a>
+                            <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="https://codeanddeploy.com/category/php">PHP</a>
+                            <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="https://codeanddeploy.com/category/laravel">LARAVEL</a>
+                            <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="https://codeanddeploy.com/category/jquery">JQUERY</a>
+                            <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="https://codeanddeploy.com/category/css">CSS</a>
+                            <!-- <div class="overflow-ellipsis mt-1 px-4 py-2 border-t border-gray-100 leading-5 text-gray-700 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">
+                                <span class="block font-bold">Resources</span>
+                                <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="">Top 100 Shopify Stores</a>
+                                <a class="block px-4 py-2 text-base leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem" tabindex="-1" href="#">Top 1000 Shopify Stores</a>
+                            </div> -->
+                                                        
+                                                    </div>
+                     </div>
+                    <!-- End Mobile menu dropdown -->
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:hidden hidden" id="mobile-menu" data-aria-hidden="true">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="https://codeanddeploy.com/" class="block text-white hover:text-gray-300 px-3 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out" aria-current="page">Home</a>
+
+            <a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#" class="block text-white hover:text-gray-300 px-3 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out">Tools</a>
+
+            <a href="https://codeanddeploy.com/" class="block text-white hover:text-gray-300 px-3 py-2 rounded-md text-base font-semibold transition duration-150 ease-in-out">Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        
+	        </div>
+
+    <div class="absolute -bottom-1 left-0 h-1 bg-transparent w-full transition duration-500 transition-all" id="page_loader_container">
+        <div class="h-1 bg-blue-500 w-0 transform transition-all duration-500 ease-out" id="page_loader"></div>
+    </div>
+
+</header><!-- End Header -->
+
+
+
+<main id="main">
+    <section class="h-full">
+                    <div class="blog-content lg:mx-auto px-6 font-segoe font-semibold">
+        <div class="grid grid-cols-12 transition duration-150 ease-in-out">
+            <article class="row-start-1 xl:col-span-9 col-span-12 mt-8">
+                <div class="head-title bg-gradient-to-r from-violet-500 to-violet-300 rounded-xl mb-6 text-white">
+                    <h1 class="text-4xl px-7 py-5">How To Implement Laravel 9 Email Verification?</h1>
+                                        <ul class="mt-1 px-7">
+                                                    <li class="inline-flex max-w-full mb-1 mr-1">
+                                <span class="inline-flex border border-white rounded-full bg-violet-300 text-white px-3 py-1 text-sm font-semibold border-opacity-20 hover:bg-white hover:text-gray-900 transition duration-150 ease-in-out">
+                                    # How To
+                                </span>
+                            </li>
+                                                    <li class="inline-flex max-w-full mb-1 mr-1">
+                                <span class="inline-flex border border-white rounded-full bg-violet-300 text-white px-3 py-1 text-sm font-semibold border-opacity-20 hover:bg-white hover:text-gray-900 transition duration-150 ease-in-out">
+                                    # laravel
+                                </span>
+                            </li>
+                                                    <li class="inline-flex max-w-full mb-1 mr-1">
+                                <span class="inline-flex border border-white rounded-full bg-violet-300 text-white px-3 py-1 text-sm font-semibold border-opacity-20 hover:bg-white hover:text-gray-900 transition duration-150 ease-in-out">
+                                    # Authentication
+                                </span>
+                            </li>
+                                            </ul>
+                                        <div class="flex items-center justify-between text-sm px-7 py-3 mt-4 bg-white bg-opacity-10">
+                        <div class="flex items-center">
+                            <svg class="h-4 w-4 mr-1.5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="mr-1 font-semibold">Admin posted this </span>
+                            <span class="font-semibold">1 year ago</span>
+                        </div>
+                        <div class="flex items-center font-semibold">
+                            <svg class="h-4 w-4 mr-1.5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="mr-1">5 minutes to read</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-body flex mb-6">
+                    <div class="w-72 h-full sticky top-4 left-0 flex lg:flex hidden">
+                        <div class="h-full w-full my-4">
+                            <p class="text-bold text-base uppercase text-gray-500">Table of contents</p>
+                            <ul class="pl-2 mt-2" id="TableOfContents">
+                            <li class="relative mb-4 transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#-top-" class="scroll-handler flex items-centyer pr-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out"><svg class="h-5 w-5 -ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>Top</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#dofm9N1dhajB5TEuGb7bRqaok" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="dofm9N1dhajB5TEuGb7bRqaok">Step 1: Run composer to your command</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#KcGGlS4lN1g1walO8D8cRUtL9" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="KcGGlS4lN1g1walO8D8cRUtL9">Step 2: Add verification routes</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#N5ldWmeKvP07b5i25dAyxf383" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="N5ldWmeKvP07b5i25dAyxf383">Step 3: Add verification controller</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#BBzZ5U8xT6s8nwmMn7WTTdUbk" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="BBzZ5U8xT6s8nwmMn7WTTdUbk">Step 4: Implement MustVerifyEmail to User Model</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#Jtm2s1uq3idTL4wFgoDkdppIL" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="Jtm2s1uq3idTL4wFgoDkdppIL">Step 5: Add verification views</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#ubpGbTOfeMoKhnj9SScRxYqSE" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="ubpGbTOfeMoKhnj9SScRxYqSE">Step 6: Add event to registration</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#0JBsDWhgYjjYpOgdUCeHBiOVV" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="0JBsDWhgYjjYpOgdUCeHBiOVV">Step 7: Register event and listener</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#uImEHtfJ2PCkp3i7sBIoaB4Ww" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="uImEHtfJ2PCkp3i7sBIoaB4Ww">Step 8: Register with mailtrap</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#SkKDwJQqlYH50YcA4hRBnjzRS" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="SkKDwJQqlYH50YcA4hRBnjzRS">Step 9: Create Dashboard Controller</a></li><li class="relative border-l transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#8Hr7QvJO1MUQx48e7TdmLRYJV" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out" data-content-id="8Hr7QvJO1MUQx48e7TdmLRYJV">Step 10: Add route for dashboard</a></li><li class="relative border-l transition duration-150 ease-in-out border-blue-500"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#jl0pUK2eDG8UkcqZfN9WmHf99" class="scroll-handler block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out text-indigo-600" data-content-id="jl0pUK2eDG8UkcqZfN9WmHf99">Step 11: Create dashboard views</a></li><li class="relative mt-4 transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#-bottom-" class="scroll-handler flex items-centyer pr-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out"><svg class="h-5 w-5 -ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Bottom</a></li></ul>
+                        </div>
+                    </div>
+                    <div class="xl:max-w-2xl w-full md:ml-auto" id="articleContainer">
+                        <a href="https://bit.ly/koolmembership" rel="nofollow" target="_blank"><img src="./How To Implement Laravel 9 Email Verification__files/fihs5w1zxx0vq4xuxdc5.png" class="blog-ads-envato-img"></a>
+                        <div class="block lg:hidden mb-10">
+                            <p class="text-bold text-base uppercase text-gray-500">Table of contents</p>
+                            <ul class="pl-2 mt-2" id="TableOfContentsMobile">
+                            <li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#dofm9N1dhajB5TEuGb7bRqaok" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 1: Run composer to your command</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#KcGGlS4lN1g1walO8D8cRUtL9" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 2: Add verification routes</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#N5ldWmeKvP07b5i25dAyxf383" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 3: Add verification controller</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#BBzZ5U8xT6s8nwmMn7WTTdUbk" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 4: Implement MustVerifyEmail to User Model</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#Jtm2s1uq3idTL4wFgoDkdppIL" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 5: Add verification views</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#ubpGbTOfeMoKhnj9SScRxYqSE" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 6: Add event to registration</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#0JBsDWhgYjjYpOgdUCeHBiOVV" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 7: Register event and listener</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#uImEHtfJ2PCkp3i7sBIoaB4Ww" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 8: Register with mailtrap</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#SkKDwJQqlYH50YcA4hRBnjzRS" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 9: Create Dashboard Controller</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#8Hr7QvJO1MUQx48e7TdmLRYJV" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 10: Add route for dashboard</a></li><li class="relative transition duration-150 ease-in-out"><a href="https://codeanddeploy.com/blog/laravel/how-to-implement-laravel-8-email-verification#jl0pUK2eDG8UkcqZfN9WmHf99" class="block px-3 py-1.5 font-semibold text-gray-500 cursor-pointer hover:text-indigo-600 transition duration-150 ease-in-out">Step 11: Create dashboard views</a></li></ul>
+                        </div>
+                        <div id="-top-"></div>
+                                                    <div class="w-full h-auto mb-6 flex items-center justify-center">
+                                <img class="rounded-lg w-full h-full" src="./How To Implement Laravel 9 Email Verification__files/how-to-implement-laravel-8-email-verificationx980.webp" alt="Laravel email verification" width="672px" height="500px">
+                            </div>
+                                                                        
+                                                <div class="leading-7 font-normal rounded-xl bg-black bg-opacity-0.1 border border-gray-0.3 px-6 py-5 hover:border-gray-300">
+                            <div id="-top-"></div>
+                            <div class="break-words" id="ArticleBody"><p>In this post, I will show you how to implement <strong>email verification</strong> for your Laravel 8, and 9 projects. Since we have authentication already we need to verify the given email is active.</p>
+<p>&nbsp;</p>
+<p>I will give you a step-by-step so that it will be easier to you to follow and implement to Laravel project.</p>
+<p>&nbsp;</p>
+<p><img src="./How To Implement Laravel 9 Email Verification__files/how-to-implement-laravel-8-email-verification-h7GIo7j46Ox980.webp" alt="laravel email verification" width="980" height="675"></p>
+<p>If you click the Verify Email Address your account will get verified.</p>
+<p>&nbsp;</p>
+<p><img src="./How To Implement Laravel 9 Email Verification__files/how-to-implement-laravel-8-email-verification-VRbvoSMhEbx980.webp" alt="laravel email confirmation" width="980" height="253"></p>
+<p>If you click the <strong>Goto Dashboard</strong> button it will be redirected to the below sample screenshot if your account has not yet been verified.</p>
+<p><img src="./How To Implement Laravel 9 Email Verification__files/how-to-implement-laravel-8-email-verification-Vdg1z3ybiCx980.webp" alt="Laravel email verification" width="980" height="205"></p>
+<p>So, we will continue to our tutorial to have this functionality.</p>
+<p>&nbsp;</p>
+<p>I assumed that you have an installed Laravel 8 Project and you have the authentication already. If no please visit this <a title="Laravel 8 Authentication Login and Registration with Username or Email" href="https://codeanddeploy.com/blog/laravel/laravel-8-authentication-login-and-registration-with-username-or-email" target="_blank" rel="noopener">tutorial</a>.</p>
+<p>&nbsp;</p>
+<h2 id="dofm9N1dhajB5TEuGb7bRqaok" class="text-3xl article-section-title font-semibold mb-4" contenteditable="false">Step 1: Run composer to your command</h2>
+<pre class=" language-markup" tabindex="0"><code class=" language-markup">composer require laravel/ui</code></pre>
+<p>&nbsp;</p>
+<h2 id="KcGGlS4lN1g1walO8D8cRUtL9" class="text-3xl article-section-title font-semibold mb-4" contenteditable="false">Step 2: Add verification routes</h2>
+<p>Add the following routes to your <strong>routes/web.php</strong>:</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'middleware'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'auth'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">.</span>
+    <span class="token operator">.</span>
+    <span class="token operator">.</span>
+    <span class="token comment">/**
+    * Verification Routes
+    */</span>
+    <span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/email/verify'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'VerificationController@show'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'verification.notice'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/email/verify/{id}/{hash}'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'VerificationController@verify'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'verification.verify'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">middleware</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'signed'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/email/resend'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'VerificationController@resend'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'verification.resend'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">.</span>
+    <span class="token operator">.</span>
+    <span class="token operator">.</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>&nbsp;</p>
+<h2 id="N5ldWmeKvP07b5i25dAyxf383" class="text-3xl article-section-title font-semibold mb-4" contenteditable="false">Step 3: Add verification controller</h2>
+<p>Let's create our VerificationController and run the following command below:</p>
+<p>&nbsp;</p>
+<pre class=" language-markup" tabindex="0"><code class=" language-markup">php artisan make:controller VerificationController</code></pre>
+<p>Then copy and paste the code below.</p>
+<p>&nbsp;</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">App<span class="token punctuation">\</span>Http<span class="token punctuation">\</span>Controllers</span><span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Http<span class="token punctuation">\</span>Request</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Foundation<span class="token punctuation">\</span>Auth<span class="token punctuation">\</span>RedirectsUsers</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Foundation<span class="token punctuation">\</span>Auth<span class="token punctuation">\</span>VerifiesEmails</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">VerificationController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/*
+    |--------------------------------------------------------------------------
+    | Email Verification Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller is responsible for handling email verification for any
+    | user that recently registered with the application. Emails may also
+    | be re-sent if the user didn't receive the original email message.
+    |
+    */</span>
+
+    <span class="token keyword">use</span> <span class="token package">VerifiesEmails</span><span class="token punctuation">,</span> RedirectsUsers<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Where to redirect users after verification.
+     *
+     * @var string
+     */</span>
+    <span class="token keyword">protected</span> <span class="token variable">$redirectTo</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'/'</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Create a new controller instance.
+     *
+     * @return void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">middleware</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'auth'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">middleware</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'signed'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">only</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'verify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">middleware</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'throttle:6,1'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">only</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'verify'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'resend'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Show the email verification notice.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">show</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$request</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasVerifiedEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                        <span class="token operator">?</span> <span class="token function">redirect</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">redirectPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">:</span> <span class="token class-name return-type">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'verification.notice'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+                            <span class="token string single-quoted-string">'pageTitle'</span> <span class="token operator">=&gt;</span> <span class="token function">__</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Account Verification'</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 id="BBzZ5U8xT6s8nwmMn7WTTdUbk" class="text-3xl article-section-title font-semibold mb-4">Step 4: Implement MustVerifyEmail to User Model</h2>
+<p>See the following codes below:</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">App<span class="token punctuation">\</span>Models</span><span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">Laravel<span class="token punctuation">\</span>Sanctum<span class="token punctuation">\</span>HasApiTokens</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Notifications<span class="token punctuation">\</span>Notifiable</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Contracts<span class="token punctuation">\</span>Auth<span class="token punctuation">\</span>MustVerifyEmail</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Database<span class="token punctuation">\</span>Eloquent<span class="token punctuation">\</span>Factories<span class="token punctuation">\</span>HasFactory</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Foundation<span class="token punctuation">\</span>Auth<span class="token punctuation">\</span>User</span> <span class="token keyword">as</span> Authenticatable<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">User</span> <span class="token keyword">extends</span> <span class="token class-name">Authenticatable</span> <span class="token keyword">implements</span> <span class="token class-name">MustVerifyEmail</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">use</span> <span class="token package">HasApiTokens</span><span class="token punctuation">,</span> HasFactory<span class="token punctuation">,</span> Notifiable<span class="token punctuation">;</span></span></code></pre>
+<p>&nbsp;</p>
+<p>As you can see I implement <strong>MustVerifyEmail </strong>to the User model.</p>
+<p>&nbsp;</p>
+<h2 id="Jtm2s1uq3idTL4wFgoDkdppIL" class="text-3xl article-section-title font-semibold mb-4">Step 5: Add verification views</h2>
+<p>Then add folder "<strong>verification</strong>" to the <strong>resources/views </strong>directory. And add a file named <strong>notice.blade.php </strong>then add the following code.</p>
+<pre class=" language-markup" tabindex="0"><code class=" language-markup">@extends('layouts.app-master')
+
+@section('content')
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bg-light p-5 rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Dashboard<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+        
+        @if (session('resent'))
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert alert-success<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                A fresh verification link has been sent to your email address.
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        @endif
+
+        Before proceeding, please check your email for a verification link. If you did not receive the email,
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ route(<span class="token punctuation">'</span>verification.resend<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>POST<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-inline<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            @csrf
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-inline btn btn-link p-0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                click here to request another
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>.
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+@endsection
+</code></pre>
+<p>&nbsp;</p>
+<h2 id="ubpGbTOfeMoKhnj9SScRxYqSE" class="text-3xl article-section-title font-semibold mb-4">Step 6: Add event to registration</h2>
+<p>Then add this line <strong>event(new Registered($user));</strong> to your register method. In this example, you can see it inside <strong>app/Http/Controllers/RegisterController.php</strong>.</p>
+<p>&nbsp;</p>
+<p>See below code:</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token comment">/**
+* Handle account registration request
+* 
+* @param RegisterRequest $request
+* 
+* @return \Illuminate\Http\Response
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">register</span><span class="token punctuation">(</span><span class="token class-name type-declaration">RegisterRequest</span> <span class="token variable">$request</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   <span class="token variable">$user</span> <span class="token operator">=</span> <span class="token class-name static-context">User</span><span class="token operator">::</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token variable">$request</span><span class="token operator">-&gt;</span><span class="token function">validated</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token function">event</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Registered</span><span class="token punctuation">(</span><span class="token variable">$user</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token function">auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token variable">$user</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token keyword">return</span> <span class="token function">redirect</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">with</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'success'</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"Account successfully registered."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>&nbsp;</p>
+<h2 id="0JBsDWhgYjjYpOgdUCeHBiOVV" class="text-3xl article-section-title font-semibold mb-4">Step 7: Register event and listener</h2>
+<p>In Laravel 8 installation the below code is already added but you need to double-check if added in <strong>$listen</strong> property so that we don't have a problem with it.</p>
+<p>&nbsp;</p>
+<p>Filename: App\Providers\EventServiceProvider.php</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token comment">/**
+* The event listener mappings for the application.
+*
+* @var array
+*/</span>
+<span class="token keyword">protected</span> <span class="token variable">$listen</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token class-name static-context">Registered</span><span class="token operator">::</span><span class="token keyword">class</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+        <span class="token class-name static-context">SendEmailVerificationNotification</span><span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>&nbsp;</p>
+<h2 id="uImEHtfJ2PCkp3i7sBIoaB4Ww" class="text-3xl article-section-title font-semibold mb-4">Step 8: Register with mailtrap</h2>
+<p>Then register to <a title="https://mailtrap.io" href="https://mailtrap.io/" target="_blank" rel="noopener">mailtrap</a> for sending test emails. And get credentials inside Demo Inbox.</p>
+<p>&nbsp;</p>
+<p><img src="./How To Implement Laravel 9 Email Verification__files/how-to-implement-email-verification-to-your-laravel-8-project-J6D0OWwi6ox980.webp" alt="Laravel email verification" width="956" height="683"></p>
+<p>Then update it to your <strong>.env</strong> file.</p>
+<p>&nbsp;</p>
+<h2 id="SkKDwJQqlYH50YcA4hRBnjzRS" class="text-3xl article-section-title font-semibold mb-4" contenteditable="false">Step 9: Create Dashboard Controller</h2>
+<p>Now we will create a <strong>DashboardController</strong> and we will secure it with <strong>verified</strong> middleware later. Run the command below:</p>
+<pre class=" language-markup" tabindex="0"><code class=" language-markup">php artisan make:controller DashboardController</code></pre>
+<p>&nbsp;</p>
+<p>Then copy and paste the code below:</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">namespace</span> <span class="token package">App<span class="token punctuation">\</span>Http<span class="token punctuation">\</span>Controllers</span><span class="token punctuation">;</span>
+
+<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Http<span class="token punctuation">\</span>Request</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">DashboardController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'dashboard.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre>
+<p>&nbsp;</p>
+<h2 id="8Hr7QvJO1MUQx48e7TdmLRYJV" class="text-3xl article-section-title font-semibold mb-4" contenteditable="false">Step 10: Add route for dashboard</h2>
+<p>Next, we will create a route for our dashboard and it must be protected with middleware called <strong>verified</strong> this is a default middleware from Laravel that only verified accounts can access.</p>
+<pre class=" language-php" tabindex="0"><code class=" language-php"><span class="token comment">//only authenticated can access this group</span>
+<span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'middleware'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'auth'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//only verified account can access with this group</span>
+    <span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'middleware'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'verified'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">/**
+             * Dashboard Routes
+             */</span>
+            <span class="token class-name static-context">Route</span><span class="token operator">::</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/dashboard'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'DashboardController@index'</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'dashboard.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>&nbsp;</p>
+<h2 id="jl0pUK2eDG8UkcqZfN9WmHf99" class="text-3xl article-section-title font-semibold mb-4" contenteditable="false">Step 11: Create dashboard views</h2>
+<p>Navigate to <strong>resources/views</strong> directory then create a folder "<strong>dashboard</strong>" then create a blade file "<strong>index.blade.php</strong>" and copy and paste the following code below:</p>
+<pre class=" language-markup" tabindex="0"><code class=" language-markup">@extends('layouts.app-master')
+
+@section('content')
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bg-light p-5 rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Dashboard<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lead<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Only authenticated users can access this page.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+@endsection
+</code></pre>
+<p>&nbsp;</p>
+<p>Let's add the "<strong>Go to Dashboard</strong>" button to our home page so that it will be clickable and redirected to the dashboard.</p>
+<p>&nbsp;</p>
+<p>If you followed my previous tutorial about <a title="Laravel 8 Authentication Login and Registration with Username or Email" href="https://codeanddeploy.com/blog/laravel/laravel-8-authentication-login-and-registration-with-username-or-email" target="_blank" rel="noopener">authentication</a> I have a <strong>home</strong> folder inside resources. Then we have the <strong>index.blade.php</strong> file. We will update it with the code below:</p>
+<pre class=" language-markup" tabindex="0"><code class=" language-markup">@extends('layouts.app-master')
+
+@section('content')
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bg-light p-5 rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        @auth
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Home page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lead<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Only authenticated users can access this section.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ route(<span class="token punctuation">'</span>dashboard.index<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-lg btn-warning me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Goto Dashboard<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-lg btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://codeanddeploy.com<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>View more tutorials here <span class="token entity named-entity" title="»">&amp;raquo;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        @endauth
+
+        @guest
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Homepage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lead<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Your viewing the home page. Please login to view the restricted data.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        @endguest
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+@endsection
+</code></pre>
+<p>&nbsp;</p>
+<p>That's pretty much it. I hope this short tutorial may help you.</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><a class="action-button mx-2 text-base inline-flex items-center justify-center text-white font-medium rounded-lg shadow-sm hover:shadow-lg py-3 px-5 border border-transparent transform hover:-translate-y-0.5 transition-all duration-150 bg-blue-700" href="https://github.com/codeanddeploy/laravel-8-authentication-with-email-verification" target="_blank" rel="noopener" data-type="success">Download Source Code</a></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>Thank you for reading Happy coding :)</p></div>
+                            <div id="-bottom-"></div>
+                        </div>
+                        <a href="https://bit.ly/koolmembership" rel="nofollow" target="_blank"><img src="./How To Implement Laravel 9 Email Verification__files/fihs5w1zxx0vq4xuxdc5.png" class="mt-8 blog-ads-envato-img"></a>
+                        
+                                                    <div class="mt-8">
+                                <div class="border-b pb-2">
+                                    <p class="text-xl font-semibold">Read next</p>
+                                </div>
+                                <ul class="mt-2">
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/combine-the-nwidart-laravel-modules-assets-to-public-using-laravel-mix">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">Combine the Nwidart Laravel Modules Assets to Public using Laravel Mix</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">1 minute to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-authentication-login-and-registration-with-username-or-email">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">Laravel 9 Auth Login and Registration with Username or Email</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">17 minutes to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/how-to-add-remember-me-functionality-to-your-laravel-8-login">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">How To Add Remember Me Functionality To Your Laravel 9 Login?</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">2 minutes to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/how-to-implement-remember-me-with-custom-expiration-to-your-laravel-8-login">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">How To Implement Remember Me with Custom Expiration To Your Laravel 8 Login?</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">2 minutes to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-logout-for-your-authenticated-user">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">Laravel 9 Logout For Your Authenticated User</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">less than a minute to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/how-to-change-the-laravel-redirect-url-when-not-authenticated">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">How To Change The Laravel Redirect URL When Not Authenticated?</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">less than a minute to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/how-to-queue-the-laravel-8-email-verification">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">How To Queue the Laravel 9 Email Verification?</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">1 minute to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                            <li class="mb-2">
+                                            <div class="flex items-center rounded-xl hover:bg-gray-200 px-3 py-2 transition duration-150 ease-in-out">
+                                                <div class="flex items-center justify-center rounded-md w-24 mr-4">
+                                                    <div class="flex items-center justify-center bg-gray-200 w-full h-16 rounded-md">
+                                                        <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-simple-custom-validation-rules-example">
+                                                        <div>
+                                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600 w-full line-clamp-2 transition duration-150 ease-in-out">Laravel 9 - Simple Custom Validation Rules Example</span>
+                                                            <div class="flex items-center text-gray-400">
+                                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                                <span class="text-sm font-semibold">1 year ago</span>
+                                                                <span class="ml-auto text-gray-500 font-semibold text sm">3 minutes to read</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+                                                <a href="https://codeanddeploy.com/dofree100?utm_source=codeanddeploy&amp;utm_medium=blog-content&amp;utm_id=do100freecredit" target="_blank" rel="nofollow">
+                        <img class="banner-blog-content footer" src="./How To Implement Laravel 9 Email Verification__files/digitalocean-ad-800x200.png" alt="Code And Deploy Banner">
+                        </a>
+                                            </div>
+                </div>
+            </article>
+            <aside class="row-start-2 col-span-12 xl:row-start-1 xl:col-span-3 xl:block mt-8 xl:mt-0 lg:ml-2 transition duration-150 ease-in-out">
+                
+                <div class="w-full h-full relative lg:pt-4 lg:px-4 pb-6 lg:mt-6">
+                    
+                                            <div class="border rounded-xl p-2 text-gray-900 mb-6">
+                            <div class="border-b px-3 pb-2 mb-2 flex items-center">
+                                <svg class="h-5 w-5 mr-1 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path>
+                                </svg>
+                                <p class="text-lg font-semibold">Popular posts</p>
+                            </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-authentication-login-and-registration-with-username-or-email">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel 9 Auth Login and Registration with Username or Email</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 1 second ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-user-roles-and-permissions-step-by-step-tutorial">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel 9 User Roles and Permissions Step by Step Tutorial</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 1 minute ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/how-to-get-file-size-on-uploaded-file-in-laravel-8">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">How to Get File Size on Uploaded file in Laravel 8?</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 1 minute ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/javascript/how-to-get-tinymce-content-when-submitting-the-button">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">How To Get TinyMCE Content When Submitting the Button?</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 1 minute ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-collection-to-array-tutorial-and-example">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel Collection to Array Tutorial and Example</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 1 minute ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-logout-for-your-authenticated-user">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel 9 Logout For Your Authenticated User</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 2 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/how-to-use-sqlite-database-in-laravel-8-using-windows">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">How To Use Laravel 9 SQLite Database using Windows?</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 2 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/php/coupon-code-generator-in-php-and-mysql-using-ajax-and-jquery">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Coupon Code Generator in PHP and MySQL using Ajax  and jQuery</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 2 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-installation-example">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel Installation Example</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 2 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/delete-record-in-laravel-8">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Delete Record in Laravel 9</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 2 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/ubuntu/how-to-install-php-intl-extension-using-terminal-and-cpanel">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">How to Install PHP Intl extension using Terminal and Cpanel</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 2 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/laravel/laravel-8-image-validation-detailed-example">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel 8 Image Validation Detailed Example</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 3 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                            <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                                    <a href="https://codeanddeploy.com/blog/php/laravel-9-socialite-login-with-google-complete-tutorial">
+                                        <div>
+                                            <span class="text-gray-700 block font-semibold text-base hover:text-blue-600">Laravel 9 Socialite Login with Google Complete Tutorial</span>
+                                            <div class="flex items-center text-gray-400">
+                                                <svg class="h-3 w-3 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="text-sm font-semibold">last read 3 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                                    </div>
+                    
+                                        <div class="banner-sidebar border rounded-xl p-2 text-gray-900 mb-6">
+                        <div class="border-b px-3 pb-2 mb-2 flex items-center">
+                            <svg class="h-5 w-5 mr-1 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-lg font-semibold">Try It Now</p>
+                        </div>
+                        <div class="leading-5 mb-2 rounded-lg px-3 py-2 hover:bg-gray-100 cursor-pointer transition duration-150 ease-in-out">
+                            <a href="https://bit.ly/s-kool-membership" target="_blank" rel="nofollow">
+                                <img src="./How To Implement Laravel 9 Email Verification__files/xshe1nz2m8xt0jif9lnz.jpg" alt="Code And Deploy Banner">
+                            </a>
+                        </div>
+                    </div>
+                                    </div>
+            </aside>
+        </div>
+    </div>
+    </section>
+
+</main><!-- End #main -->
+
+<footer id="footer" class="bg-head-900 text-white">
+    
+    <div class="mt-6 py-6 max-w-6xl lg:mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-center justify-betwee md:items-start flex-col">
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-9" src="./How To Implement Laravel 9 Email Verification__files/logo.png" alt="Code And Deploy Logo">
+                </div>
+                <div class="md:w-full mt-4">
+                    <p class="w-96 md:w-full text-white text-base text-center md:text-left leading-7">
+                        Provides a programming tutorial for aspiring web &amp; software developers to help them understand PHP, Laravel Framework, CSS3, HTML5, MySQL, Bootstrap, and many more. We hope that our tutorials can help you grow your career as a programmer.
+                    </p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="w-96 mx-auto md:ml-auto text-white flex justify-between flex-col md:flex-row">
+                    <div class="about">
+                        <p class="uppercase font-bold text-base mb-2 text-center md:text-left">About</p>
+                        <ul class="flex flex-row md:flex-col justify-evenly">
+                            <li><a href="https://codeanddeploy.com/about" class="font-semibold text-base block mb-2 text-gray-300 text-opacity-60 hover:text-white transition duration-150 ease-in-out">About Us</a></li>
+                            <li><a href="https://codeanddeploy.com/contact" class="font-semibold text-base block mb-2 text-gray-300 text-opacity-60 hover:text-white transition duration-150 ease-in-out">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="term mt-2 md:mt-0">
+                        <p class="uppercase font-bold text-base mb-2 text-center md:text-left">Other Pages</p>
+                        <ul class="flex flex-row md:flex-col justify-evenly">
+                            <li><a href="https://codeanddeploy.com/terms" class="font-semibold text-base block mb-2 text-gray-300 text-opacity-60 hover:text-white transition duration-150 ease-in-out">Terms of Service</a></li>
+                            <li><a href="https://codeanddeploy.com/disclaimer" class="font-semibold text-base block mb-2 text-gray-300 text-opacity-60 hover:text-white transition duration-150 ease-in-out">Disclaimer</a></li>
+                            <li><a href="https://codeanddeploy.com/privacy" class="font-semibold text-base block mb-2 text-gray-300 text-opacity-60 hover:text-white transition duration-150 ease-in-out">Privacy Policy</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright mt-6 text-xs flex flex-col border-t border-gray-300 border-opacity-20 pt-3">
+            <div class="flex-1 text-center">Copyright © 2023 <strong><span>Code And Deploy</span></strong>. All Rights Reserved.</div>
+        </div>
+    </div>
+</footer>
+
+		</div>
+
+		<div id="overlay" class="fixed z-50 inset-0 overflow-y-auto transition duration-300 ease-in-out" aria-labelledby="LeaveCreateBlogPage" role="dialog" aria-modal="true" style="display: none;">
+  	<div class="flex items-center bg-black bg-opacity-50 justify-center min-h-screen">
+        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-black bg-opacity-50">
+            <svg class="animate-spin h-7 w-7 text-white" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+        </div>
+    </div>
+</div>
+
+		<!-- Vendor JS Files -->
+<script src="./How To Implement Laravel 9 Email Verification__files/jquery.bs.min.js.téléchargement"></script>
+<script src="./How To Implement Laravel 9 Email Verification__files/plugins.min.js.téléchargement"></script><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How To Implement Laravel 9 Email Verification__files/ads.html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins>
+
+
+
+    <script>
+        var ARTICLE = {
+    "id": 40,
+    "user_id": 1,
+    "title": "How To Implement Laravel 9 Email Verification?",
+    "body": "<p>In this post, I will show you how to implement <strong>email verification<\/strong> for your Laravel 8, and 9 projects. Since we have authentication already we need to verify the given email is active.<\/p>\n<p>\u00a0<\/p>\n<p>I will give you a step-by-step so that it will be easier to you to follow and implement to Laravel project.<\/p>\n<p>\u00a0<\/p>\n<p><img src=\"https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-laravel-8-email-verification-h7GIo7j46Ox980.webp?ctm=1630218345\" alt=\"laravel email verification\" width=\"980\" height=\"675\" \/><\/p>\n<p>If you click the Verify Email Address your account will get verified.<\/p>\n<p>\u00a0<\/p>\n<p><img src=\"https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-laravel-8-email-verification-VRbvoSMhEbx980.webp?ctm=1630218429\" alt=\"laravel email confirmation\" width=\"980\" height=\"253\" \/><\/p>\n<p>If you click the <strong>Goto Dashboard<\/strong> button it will be redirected to the below sample screenshot if your account has not yet been verified.<\/p>\n<p><img src=\"https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-laravel-8-email-verification-Vdg1z3ybiCx980.webp?ctm=1630218534\" alt=\"Laravel email verification\" width=\"980\" height=\"205\" \/><\/p>\n<p>So, we will continue to our tutorial to have this functionality.<\/p>\n<p>\u00a0<\/p>\n<p>I assumed that you have an installed Laravel 8 Project and you have the authentication already. If no please visit this <a title=\"Laravel 8 Authentication Login and Registration with Username or Email\" href=\"https:\/\/codeanddeploy.com\/blog\/laravel\/laravel-8-authentication-login-and-registration-with-username-or-email\" target=\"_blank\" rel=\"noopener\">tutorial<\/a>.<\/p>\n<p>\u00a0<\/p>\n<h2 id=\"dofm9N1dhajB5TEuGb7bRqaok\" class=\"text-3xl article-section-title font-semibold mb-4\" contenteditable=\"false\">Step 1: Run composer to your command<\/h2>\n<pre class=\"language-markup\"><code>composer require laravel\/ui<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"KcGGlS4lN1g1walO8D8cRUtL9\" class=\"text-3xl article-section-title font-semibold mb-4\" contenteditable=\"false\">Step 2: Add verification routes<\/h2>\n<p>Add the following routes to your <strong>routes\/web.php<\/strong>:<\/p>\n<pre class=\"language-php\"><code>Route::group(['middleware' =&gt; ['auth']], function() {\n    .\n    .\n    .\n    \/**\n    * Verification Routes\n    *\/\n    Route::get('\/email\/verify', 'VerificationController@show')-&gt;name('verification.notice');\n    Route::get('\/email\/verify\/{id}\/{hash}', 'VerificationController@verify')-&gt;name('verification.verify')-&gt;middleware(['signed']);\n    Route::post('\/email\/resend', 'VerificationController@resend')-&gt;name('verification.resend');\n    .\n    .\n    .\n});<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"N5ldWmeKvP07b5i25dAyxf383\" class=\"text-3xl article-section-title font-semibold mb-4\" contenteditable=\"false\">Step 3: Add verification controller<\/h2>\n<p>Let's create our VerificationController and run the following command below:<\/p>\n<p>\u00a0<\/p>\n<pre class=\"language-markup\"><code>php artisan make:controller VerificationController<\/code><\/pre>\n<p>Then copy and paste the code below.<\/p>\n<p>\u00a0<\/p>\n<pre class=\"language-php\"><code>&lt;?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\nuse Illuminate\\Foundation\\Auth\\RedirectsUsers;\nuse Illuminate\\Foundation\\Auth\\VerifiesEmails;\n\nclass VerificationController extends Controller\n{\n    \/*\n    |--------------------------------------------------------------------------\n    | Email Verification Controller\n    |--------------------------------------------------------------------------\n    |\n    | This controller is responsible for handling email verification for any\n    | user that recently registered with the application. Emails may also\n    | be re-sent if the user didn't receive the original email message.\n    |\n    *\/\n\n    use VerifiesEmails, RedirectsUsers;\n\n    \/**\n     * Where to redirect users after verification.\n     *\n     * @var string\n     *\/\n    protected $redirectTo = '\/';\n\n    \/**\n     * Create a new controller instance.\n     *\n     * @return void\n     *\/\n    public function __construct()\n    {\n        $this-&gt;middleware('auth');\n        $this-&gt;middleware('signed')-&gt;only('verify');\n        $this-&gt;middleware('throttle:6,1')-&gt;only('verify', 'resend');\n    }\n\n    \/**\n     * Show the email verification notice.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return \\Illuminate\\Http\\RedirectResponse|\\Illuminate\\View\\View\n     *\/\n    public function show(Request $request)\n    {\n        return $request-&gt;user()-&gt;hasVerifiedEmail()\n                        ? redirect($this-&gt;redirectPath())\n                        : view('verification.notice', [\n                            'pageTitle' =&gt; __('Account Verification')\n                        ]);\n    }\n}\n<\/code><\/pre>\n<p>\u00a0<\/p>\n<p>\u00a0<\/p>\n<h2 id=\"BBzZ5U8xT6s8nwmMn7WTTdUbk\" class=\"text-3xl article-section-title font-semibold mb-4\">Step 4: Implement MustVerifyEmail to User Model<\/h2>\n<p>See the following codes below:<\/p>\n<pre class=\"language-php\"><code>&lt;?php\n\nnamespace App\\Models;\n\nuse Laravel\\Sanctum\\HasApiTokens;\nuse Illuminate\\Notifications\\Notifiable;\nuse Illuminate\\Contracts\\Auth\\MustVerifyEmail;\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Foundation\\Auth\\User as Authenticatable;\n\nclass User extends Authenticatable implements MustVerifyEmail\n{\n    use HasApiTokens, HasFactory, Notifiable;<\/code><\/pre>\n<p>\u00a0<\/p>\n<p>As you can see I implement <strong>MustVerifyEmail <\/strong>to the User model.<\/p>\n<p>\u00a0<\/p>\n<h2 id=\"Jtm2s1uq3idTL4wFgoDkdppIL\" class=\"text-3xl article-section-title font-semibold mb-4\">Step 5: Add verification views<\/h2>\n<p>Then add folder \"<strong>verification<\/strong>\" to the <strong>resources\/views <\/strong>directory. And add a file named <strong>notice.blade.php <\/strong>then add the following code.<\/p>\n<pre class=\"language-markup\"><code>@extends('layouts.app-master')\n\n@section('content')\n    &lt;div class=\"bg-light p-5 rounded\"&gt;\n        &lt;h1&gt;Dashboard&lt;\/h1&gt;\n        \n        @if (session('resent'))\n            &lt;div class=\"alert alert-success\" role=\"alert\"&gt;\n                A fresh verification link has been sent to your email address.\n            &lt;\/div&gt;\n        @endif\n\n        Before proceeding, please check your email for a verification link. If you did not receive the email,\n        &lt;form action=\"{{ route('verification.resend') }}\" method=\"POST\" class=\"d-inline\"&gt;\n            @csrf\n            &lt;button type=\"submit\" class=\"d-inline btn btn-link p-0\"&gt;\n                click here to request another\n            &lt;\/button&gt;.\n        &lt;\/form&gt;\n    &lt;\/div&gt;\n@endsection\n<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"ubpGbTOfeMoKhnj9SScRxYqSE\" class=\"text-3xl article-section-title font-semibold mb-4\">Step 6: Add event to registration<\/h2>\n<p>Then add this line <strong>event(new Registered($user));<\/strong> to your register method. In this example, you can see it inside <strong>app\/Http\/Controllers\/RegisterController.php<\/strong>.<\/p>\n<p>\u00a0<\/p>\n<p>See below code:<\/p>\n<pre class=\"language-php\"><code>\/**\n* Handle account registration request\n* \n* @param RegisterRequest $request\n* \n* @return \\Illuminate\\Http\\Response\n*\/\npublic function register(RegisterRequest $request) \n{\n   $user = User::create($request-&gt;validated());\n\n   event(new Registered($user));\n\n   auth()-&gt;login($user);\n\n   return redirect('\/')-&gt;with('success', \"Account successfully registered.\");\n}<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"0JBsDWhgYjjYpOgdUCeHBiOVV\" class=\"text-3xl article-section-title font-semibold mb-4\">Step 7: Register event and listener<\/h2>\n<p>In Laravel 8 installation the below code is already added but you need to double-check if added in <strong>$listen<\/strong> property so that we don't have a problem with it.<\/p>\n<p>\u00a0<\/p>\n<p>Filename: App\\Providers\\EventServiceProvider.php<\/p>\n<pre class=\"language-php\"><code>\/**\n* The event listener mappings for the application.\n*\n* @var array\n*\/\nprotected $listen = [\n    Registered::class =&gt; [\n        SendEmailVerificationNotification::class,\n    ],\n];<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"uImEHtfJ2PCkp3i7sBIoaB4Ww\" class=\"text-3xl article-section-title font-semibold mb-4\">Step 8: Register with mailtrap<\/h2>\n<p>Then register to <a title=\"https:\/\/mailtrap.io\" href=\"https:\/\/mailtrap.io\" target=\"_blank\" rel=\"noopener\">mailtrap<\/a> for sending test emails. And get credentials inside Demo Inbox.<\/p>\n<p>\u00a0<\/p>\n<p><img src=\"https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-email-verification-to-your-laravel-8-project-J6D0OWwi6ox980.webp?ctm=1630212847\" alt=\"Laravel email verification\" width=\"956\" height=\"683\" \/><\/p>\n<p>Then update it to your <strong>.env<\/strong> file.<\/p>\n<p>\u00a0<\/p>\n<h2 id=\"SkKDwJQqlYH50YcA4hRBnjzRS\" class=\"text-3xl article-section-title font-semibold mb-4\" contenteditable=\"false\">Step 9: Create Dashboard Controller<\/h2>\n<p>Now we will create a <strong>DashboardController<\/strong> and we will secure it with <strong>verified<\/strong> middleware later. Run the command below:<\/p>\n<pre class=\"language-markup\"><code>php artisan make:controller DashboardController<\/code><\/pre>\n<p>\u00a0<\/p>\n<p>Then copy and paste the code below:<\/p>\n<pre class=\"language-php\"><code>&lt;?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass DashboardController extends Controller\n{\n    public function index() \n    {\n        return view('dashboard.index');\n    }\n}\n<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"8Hr7QvJO1MUQx48e7TdmLRYJV\" class=\"text-3xl article-section-title font-semibold mb-4\" contenteditable=\"false\">Step 10: Add route for dashboard<\/h2>\n<p>Next, we will create a route for our dashboard and it must be protected with middleware called <strong>verified<\/strong> this is a default middleware from Laravel that only verified accounts can access.<\/p>\n<pre class=\"language-php\"><code>\/\/only authenticated can access this group\nRoute::group(['middleware' =&gt; ['auth']], function() {\n    \/\/only verified account can access with this group\n    Route::group(['middleware' =&gt; ['verified']], function() {\n            \/**\n             * Dashboard Routes\n             *\/\n            Route::get('\/dashboard', 'DashboardController@index')-&gt;name('dashboard.index');\n    });\n});<\/code><\/pre>\n<p>\u00a0<\/p>\n<h2 id=\"jl0pUK2eDG8UkcqZfN9WmHf99\" class=\"text-3xl article-section-title font-semibold mb-4\" contenteditable=\"false\">Step 11: Create dashboard views<\/h2>\n<p>Navigate to <strong>resources\/views<\/strong> directory then create a folder \"<strong>dashboard<\/strong>\" then create a blade file \"<strong>index.blade.php<\/strong>\" and copy and paste the following code below:<\/p>\n<pre class=\"language-markup\"><code>@extends('layouts.app-master')\n\n@section('content')\n    &lt;div class=\"bg-light p-5 rounded\"&gt;\n        &lt;h1&gt;Dashboard&lt;\/h1&gt;\n        &lt;p class=\"lead\"&gt;Only authenticated users can access this page.&lt;\/p&gt;\n    &lt;\/div&gt;\n@endsection\n<\/code><\/pre>\n<p>\u00a0<\/p>\n<p>Let's add the \"<strong>Go to Dashboard<\/strong>\" button to our home page so that it will be clickable and redirected to the dashboard.<\/p>\n<p>\u00a0<\/p>\n<p>If you followed my previous tutorial about <a title=\"Laravel 8 Authentication Login and Registration with Username or Email\" href=\"https:\/\/codeanddeploy.com\/blog\/laravel\/laravel-8-authentication-login-and-registration-with-username-or-email\" target=\"_blank\" rel=\"noopener\">authentication<\/a> I have a <strong>home<\/strong> folder inside resources. Then we have the <strong>index.blade.php<\/strong> file. We will update it with the code below:<\/p>\n<pre class=\"language-markup\"><code>@extends('layouts.app-master')\n\n@section('content')\n    &lt;div class=\"bg-light p-5 rounded\"&gt;\n        @auth\n        &lt;h1&gt;Home page&lt;\/h1&gt;\n        &lt;p class=\"lead\"&gt;Only authenticated users can access this section.&lt;\/p&gt;\n        &lt;a href=\"{{ route('dashboard.index') }}\" class=\"btn btn-lg btn-warning me-2\"&gt;Goto Dashboard&lt;\/a&gt;\n        &lt;a class=\"btn btn-lg btn-primary\" href=\"https:\/\/codeanddeploy.com\" role=\"button\"&gt;View more tutorials here &amp;raquo;&lt;\/a&gt;\n        @endauth\n\n        @guest\n        &lt;h1&gt;Homepage&lt;\/h1&gt;\n        &lt;p class=\"lead\"&gt;Your viewing the home page. Please login to view the restricted data.&lt;\/p&gt;\n        @endguest\n    &lt;\/div&gt;\n@endsection\n<\/code><\/pre>\n<p>\u00a0<\/p>\n<p>That's pretty much it. I hope this short tutorial may help you.<\/p>\n<p style=\"text-align: center;\">\u00a0<\/p>\n<p style=\"text-align: center;\"><a class=\"action-button mx-2 text-base inline-flex items-center justify-center text-white font-medium rounded-lg shadow-sm hover:shadow-lg py-3 px-5 border border-transparent transform hover:-translate-y-0.5 transition-all duration-150 bg-blue-700\" href=\"https:\/\/github.com\/codeanddeploy\/laravel-8-authentication-with-email-verification\" target=\"_blank\" rel=\"noopener\" data-type=\"success\">Download Source Code<\/a><\/p>\n<p style=\"text-align: center;\">\u00a0<\/p>\n<p>Thank you for reading Happy coding :)<\/p>",
+    "visible_date": 1684155193,
+    "handle": "how-to-implement-laravel-8-email-verification",
+    "created_at": "2021-08-29T04:57:16.000000Z",
+    "article_updated_at": "2022-05-31 03:11:13",
+    "updated_at": "2023-05-15T12:53:13.000000Z",
+    "category_id": 2,
+    "summary": "In this post, I will show you how to implement email verification for your Laravel 8, and 9 projects. Since we have authentication already we need to verify the given email is active. I will give you a step-by-step so that it will be easier to you to follow and implement to Laravel project.",
+    "view_count": 30639,
+    "last_read": 1684155193,
+    "ert": "5 minutes to read",
+    "image": {
+        "id": 129,
+        "article_id": 40,
+        "src": "https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-laravel-8-email-verificationx980.webp",
+        "altText": "Laravel email verification",
+        "type": "full"
+    },
+    "date": "1 year ago",
+    "tags": [
+        {
+            "id": 19,
+            "name": "How To",
+            "pivot": {
+                "taggable_id": 40,
+                "tag_id": 19,
+                "taggable_type": "Modules\\Blog\\Entities\\Article"
+            }
+        },
+        {
+            "id": 13,
+            "name": "laravel",
+            "pivot": {
+                "taggable_id": 40,
+                "tag_id": 13,
+                "taggable_type": "Modules\\Blog\\Entities\\Article"
+            }
+        },
+        {
+            "id": 20,
+            "name": "Authentication",
+            "pivot": {
+                "taggable_id": 40,
+                "tag_id": 20,
+                "taggable_type": "Modules\\Blog\\Entities\\Article"
+            }
+        }
+    ],
+    "images": [
+        {
+            "id": 129,
+            "article_id": 40,
+            "src": "https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-laravel-8-email-verificationx980.webp",
+            "altText": "Laravel email verification",
+            "type": "full"
+        },
+        {
+            "id": 130,
+            "article_id": 40,
+            "src": "https:\/\/ecn-storage.s3.us-west-2.amazonaws.com\/articles\/how-to-implement-laravel-8-email-verificationx300.webp",
+            "altText": "Laravel email verification",
+            "type": "thumbnail"
+        }
+    ],
+    "seo": {
+        "id": 40,
+        "article_id": 40,
+        "title": "How To Implement Laravel 9 Email Verification?",
+        "description": "I will show you how to implement email verification for your Laravel 8, and 9 projects. After a user registers to your application we need to verify it via email."
+    }
+};
+    </script>
+
+
+<!-- Modules Javascript Plugins -->
+                        <script src="./How To Implement Laravel 9 Email Verification__files/prism.js.téléchargement"></script>
+            
+<!-- Modules Javascript -->
+                        <script src="./How To Implement Laravel 9 Email Verification__files/blog_script.js.téléchargement"></script>
+            
+		<div class="js-cookie-consent cookie-consent fixed bg-yellow-100 border-l-4 border-red-500 text-yellow-700 p-2 mt-2 gdpr-bottom">
+
+    <span class="cookie-consent__message">
+        Your experience on this site will be improved by allowing cookies.
+    </span>
+
+    <button class="js-cookie-consent-agree cookie-consent__agree bg-yellow-200 p-2">
+        Allow cookies
+    </button>
+
+</div>
+
+    <script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'codeanddeploy.com';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 90);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/'
+                    + '';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+
+	
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: block; width: 100% !important; height: 129px !important; bottom: auto !important; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: 0px; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_2" name="aswift_2" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How To Implement Laravel 9 Email Verification__files/zrt_lookup.html" data-google-container-id="a!3" data-google-query-id="CISah4Kv9_4CFeNAFQgdPn4HrQ" data-load-complete="true"></iframe></div><div class="grippy-host" style="position: absolute !important; top: 124px !important; width: 100% !important;"><template shadowrootmode="closed"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; top: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; top: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowBottom" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,4 L0,22 A6,6 0 0,0 6,28 L50,28 A6,6 0 0,0 56,22 L56,10 A6,6 0 0,1 61,4 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowBottom&quot;);"></path><rect x="0" y="0" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="up" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="18" x2="28" y2="12"></line><line x1="28" y1="12" x2="34" y2="18"></line></g></svg></span></ins></template></div></ins><iframe src="./How To Implement Laravel 9 Email Verification__files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./How To Implement Laravel 9 Email Verification__files/zrt_lookup(1).html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_1" name="aswift_1" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How To Implement Laravel 9 Email Verification__files/zrt_lookup(2).html" data-google-container-id="a!2" data-google-query-id="CIOah4Kv9_4CFeNAFQgdPn4HrQ" data-load-complete="true"></iframe></div></ins></html>

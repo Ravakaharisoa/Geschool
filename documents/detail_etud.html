@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        body {
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            color: #2A2F5B;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Lato', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        #page{
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 20px 10px;
+        }
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+        }
+        .fw-bold{
+            font-weight: 700;
+        }
+        .m-1 {
+            margin: .25rem !important
+        }
+        .mt-3, .my-3 {
+            margin-top: 1rem !important
+        }
+        .pt-2, .py-2 {
+            padding-top: .5rem !important
+        }
+        .col-md-3 {
+            -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+            max-width: 25%
+        }
+        .col-md-6 {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%
+        }
+        .profile_photo{
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+        }
+        .d-flex{
+            display: flex;
+            flex-direction: row;
+        }
+        .align-items-center {
+            -ms-flex-align: center !important;
+            align-items: center !important
+        }
+        #page .info{
+            width: 45%;
+            text-align: start;
+            padding: 15px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(0,0,0,.1);
+        }
+    </style>
+</head>
+<body>
+    <section id="page">
+        <div class="info">
+            <h3 class="fw-bold">INFORMATIONS GENERALES</h3>
+            <div class="flex-column">
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Nom </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Prénoms </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Sexe </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Date de naissance </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>N° Matricule </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Classe </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Nationalité </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Adresse </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+                <span class="m-1 d-flex align-items-center"><div class="col-md-3"><b>Maladie </b>:</div>
+                    <div class="col-md-6"></div>
+                </span>
+            </div>
+            <hr class="my-3">
+            <div class="flex-column">
+                <span class="m-1 d-flex align-items-center"><b>Nom du Père</b>:</span>
+                <span class="m-1 d-flex align-items-center"><b>Nom de la Mère </b>:</span>
+                <span class="m-1 d-flex align-items-center"><b>Contact Primaire </b>:</span>
+                <span class="m-1 d-flex align-items-center"><b>Contact Sécondaire </b>:</span>
+                <span class="m-1 d-flex align-items-center"><b>Adresse Email </b>:</span>
+                <span class="m-1 d-flex align-items-center"><b>Autres Information </b>:</span>
+            </div>
+            <hr class="my-3">
+            <h3 class="fw-bold">ABSCENCES</h3>
+            <div class="flex-column">
+                <span class="m-1 d-flex align-items-center"><b> </b></span>
+                <span class="m-1 d-flex align-items-center"><b> </b> </span>
+                <span class="m-1 d-flex align-items-center"><b> </b></span>
+            </div>
+            <hr class="my-3">
+        </div>
+        <div class="info">
+            <div class="flex-column">
+                <div>
+                    <img src="" class="profile_photo" alt="" >
+                </div>
+                <span class="m-1 py-2"><b>Année Scolaire</b> :</span>
+            </div>
+            <hr class="my-3">
+            <h3 class="fw-bold">PAIEMENTS DE SCOLARITES</h3>
+            <div class="flex-column">
+                <span class="m-1 d-flex align-items-center"><b>Scolarité à payer </b>:</span>
+                <span class="m-1 d-flex align-items-center"><b>Scolarité payée </b> :</span>
+                <span class="m-1 d-flex align-items-center"><b>Reste à payée </b>:</span>
+            </div>
+            <hr class="my-3">
+            <h3 class="fw-bold">CANTINES (Derniers paiements)</h3>
+            <div class="flex-column">
+                <span class="m-1 d-flex align-items-center"><b></b></span>
+                <span class="m-1 d-flex align-items-center"><b> </b></span>
+            </div>
+            <hr class="my-3">
+            <h3 class="fw-bold">TRANSPORTS (Derniers paiements)</h3>
+            <div class="flex-column">
+                <span class="m-1 d-flex align-items-center"><b></b></span>
+                <span class="m-1 d-flex align-items-center"><b> </b></span>
+            </div>
+            <hr class="my-3">
+        </div>
+    </section>
+</body>
+</html>

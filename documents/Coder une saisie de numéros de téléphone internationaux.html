@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="fr" class="uk-notouch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.twilio.com/fr/blog/fr/blog/feed">
+    
+    
+    <meta name="description" content="This blog post will walk through how to build a phone number input field to process and parse international phone numbers using basic HTML, JavaScript, and the intl-tel-input plugin.">
+    
+    
+
+  
+
+
+    
+    <title>Coder une saisie de numéros de téléphone internationaux</title>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+   <link rel="alternate" hreflang="de" href="https://www.twilio.com/de/blog/erstellen-eines-eingabefelds-fur-internationale-telefonnummern-html-javascript"><link rel="canonical" hreflang="en" href="https://www.twilio.com/blog/international-phone-number-input-html-javascript"><link rel="alternate" hreflang="es" href="https://www.twilio.com/es-mx/blog/como-crear-entradas-internacionales-de-numeros-de-telefono-en-html-y-javascript"><link rel="alternate" hreflang="fr" href="https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript"><link rel="alternate" hreflang="ja" href="https://www.twilio.com/ja/blog/international-phone-number-input-html-javascript-jp"><link rel="alternate" hreflang="pt" href="https://www.twilio.com/pt-br/blog/como-criar-uma-campo-de-numero-de-telefone-internacional-em-html-e-javascript">
+
+  <script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/clarity.js.téléchargement"></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/5202129"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/munchkin.js.téléchargement"></script><script async="" id="ORIBILIscript" src="./Coder une saisie de numéros de téléphone internationaux_files/oribili.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/bat.js.téléchargement"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/rules-p-efmoRQHrDUXig.js.téléchargement" async=""></script><script type="text/javascript" src="./Coder une saisie de numéros de téléphone internationaux_files/commons.c42222c4cb2f8913500f.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Coder une saisie de numéros de téléphone internationaux_files/bing-ads.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/dM4.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/js"></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/qevents.js.téléchargement"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/pixel.js.téléchargement" async=""></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/datadog-rum.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/6si.min.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/bf-munchkin.min.js.téléchargement"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/quant.js.téléchargement" async="" type="text/javascript"></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/uwt.js.téléchargement"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/1040773425961662" async=""></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/fbevents.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/bat.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/analytics.min.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/hotjar-1359002.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/insight.min.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/analytics.js.téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/heap-1541905715.js.téléchargement"></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/gtm.js.téléchargement"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/sdk.js.téléchargement" async="" crossorigin="anonymous"></script><script async="" defer="" src="./Coder une saisie de numéros de téléphone internationaux_files/notice"></script><script id="facebook-jssdk" src="./Coder une saisie de numéros de téléphone internationaux_files/sdk.js(1).téléchargement"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/recaptcha__fr.js.téléchargement" crossorigin="anonymous" integrity="sha384-zi6XSFwx7fdT60l9TWy4exIZ4fjTqQzc930J6kAqQbyc8Ye2CTqJ/fjfqJqqw11t"></script><script type="application/ld+json">{"@context": "http://schema.org", "@type": "BlogPosting", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript"}, "headline": "Coder une saisie de num\u00e9ros de t\u00e9l\u00e9phone internationaux", "datePublished": "2021-02-01T15:46:00+00:00", "publisher": {"@type": "Organization", "name": "Twilio", "url": "https://www.twilio.com", "logo": {"@type": "ImageObject", "url": "https://twilio-cms-prod.s3.amazonaws.com/original_images/twilio-logo-red-60px-tall.png", "width": 199, "height": 60}, "sameAs": ["https://twitter.com/twilio", "https://www.facebook.com/TeamTwilio", "https://plus.google.com/+twilio", "https://www.linkedin.com/company/twilio-inc-", "https://instagram.com/twilio/"]}, "description": "This blog post will walk through how to build a phone number input field to process and parse international phone numbers using basic HTML, JavaScript, and the intl-tel-input plugin.", "author": {"@type": "Person", "name": "Kelley Robinson"}, "dateModified": "2023-01-10T16:28:33.339784+00:00", "image": {"@type": "ImageObject", "url": "https://assets.cdn.prod.twilio.com/original_images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnwsx2jJcZw6zWMKSu6UlRkhXcjl4QV7hoRGZHFFhRisLm", "height": 600, "width": 1200}}</script>
+  
+
+
+
+<meta property="og:title" content="Coder une saisie de numéros de téléphone internationaux">
+
+<meta property="og:url" content="https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript">
+<meta property="og:site_name" content="Twilio Blog">
+<meta property="og:type" content="article">
+
+  <meta property="og:image:alt" content="Comment coder une saisie de numéros de téléphone internationaux avec HTML et JavaScript">
+  <meta property="og:image" content="https://assets.cdn.prod.twilio.com/original_images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnwsx2jJcZw6zWMKSu6UlRkhXcjl4QV7hoRGZHFFhRisLm">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+
+
+<meta property="og:description" content="This blog post will walk through how to build a phone number input field to process and parse international phone numbers using basic HTML, JavaScript, and the intl-tel-input plugin.">
+
+
+
+<meta name="twitter:site" content="@twilio">
+
+<meta name="twitter:title" content="Coder une saisie de numéros de téléphone internationaux">
+
+
+<meta name="twitter:description" content="This blog post will walk through how to build a phone number input field to process and parse international phone numbers using basic HTML, JavaScript, and the intl-tel-input plugin.">
+
+
+  <meta name="twitter:image:alt" content="Comment coder une saisie de numéros de téléphone internationaux avec HTML et JavaScript">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://assets.cdn.prod.twilio.com/original_images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnwsx2jJcZw6zWMKSu6UlRkhXcjl4QV7hoRGZHFFhRisLm">
+
+
+
+
+<meta property="fb:app_id" content="414254592083321">
+
+
+
+
+
+  
+
+  
+  
+
+  <script>
+      dataLayer = [{
+          'author': 'Kelley Robinson',
+          'tags': 'Lookup,html,Account Security,JavaScript',
+          'categories': 'code-tutorials-and-hacks',
+          'published_at': '2021-02-01',
+          'modified_at': '2023-01-10',
+      }]
+  </script>
+
+
+  
+  <link rel="shortcut icon" href="https://www.twilio.com/docs/static/img/favicons/favicon.f4c9be42b.ico">
+  <link rel="apple-touch-icon" href="https://www.twilio.com/docs/static/img/favicons/favicon_57.f4c9be42b.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.twilio.com/docs/static/img/favicons/favicon_72.f4c9be42b.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.twilio.com/docs/static/img/favicons/favicon_114.f4c9be42b.png">
+
+  
+  <link rel="stylesheet" href="./Coder une saisie de numéros de téléphone internationaux_files/fonts.min.f4c9be42b.css">
+  <link rel="stylesheet" href="./Coder une saisie de numéros de téléphone internationaux_files/font-awesome.min.f4c9be42b.css">
+
+  
+  <link rel="stylesheet" href="./Coder une saisie de numéros de téléphone internationaux_files/blog.min.f4c9be42b.css">
+  
+
+  
+  
+
+  
+  <script>
+  var twilio = twilio || {};
+  twilio.environment = "prod";
+  twilio.baseUrl = "https://www.twilio.com";
+  twilio.DOCSEARCH_APP_ID = "OOAM14PGB2";
+  twilio.DOCSEARCH_API_KEY = "22caea5865713b51c9dc8953bba2db41";
+  twilio.FACEBOOK_APP_ID = "414254592083321";
+
+
+  twilio.account = twilio.account || {};
+  
+
+  twilio.user = twilio.user || {};
+  
+  
+    twilio.user.visitorSid = "VI13f0a2d4ec4dc56f0a2fe7f73b103b8e";
+  
+  
+
+  
+  twilio.user.language = "node-js";
+  
+
+  
+
+</script>
+
+<style type="text/css" data-href="node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css">pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+</style><style type="text/css" data-href="node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css">pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prism’s padding-top */
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+@media print {
+  .line-highlight {
+    /*
+		 * This will prevent browsers from replacing the background color with white.
+		 * It's necessary because the element is layered on top of the displayed code.
+		 */
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows {
+  pointer-events: all;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+  cursor: pointer;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+  background-color: rgba(128, 128, 128, .2);
+}
+</style><meta name="csrfToken" content="59a62d7202c19114393e3c02f981ab11d1565cdf854b543471215689159e28b9"><meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/f.txt"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/f(1).txt"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/f(2).txt"></script><script type="text/javascript" async="" src="./Coder une saisie de numéros de téléphone internationaux_files/munchkin.js(1).téléchargement"></script><script async="" src="./Coder une saisie de numéros de téléphone internationaux_files/modules.b440b8b3971e5ec6056f.js.téléchargement" charset="utf-8"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/ct"></script><script src="./Coder une saisie de numéros de téléphone internationaux_files/5202129.js.téléchargement" type="text/javascript" async="" data-ueto="ueto_c4115c2b32"></script><style type="text/css" id="qual_style-op2"></style><style type="text/css" id="qual_style-ozi"></style><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body class="outer-container"><a href="https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript#" tabindex="-1" aria-hidden="true" rel="nofollow" style="opacity: 0.01; position: absolute; z-index: -999; width: 54px; height: 22px;">___</a><div style="opacity: 0.01; position: absolute; z-index: -1000; width: 54px; height: 22px;"></div>
+    
+      
+    
+
+    
+    
+      
+
+<div role="drawer" class="nav__drawer">
+  <div role="drawer__wrapper" class="nav__drawer-wrapper">
+    <div role="drawer__nav" class="nav__drawer-nav"><span class="nav__drawer-auth"><a href="https://www.twilio.com/login" class="nav__drawer-auth-link">Se connecter</a><a href="https://www.twilio.com/try-twilio" class="nav__drawer-auth-link">Sign Up</a></span><a href="https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript#close" role="drawer__close" class="nav__drawer-close">Close</a></div>
+    <div class="nav__drawer-menu">
+      <div class="nav__drawer-container">
+        <div class="nav__drawer-grid">
+          <div class="nav__drawer-section">
+            <div role="drawer__header" class="nav__drawer-header">
+              Produits
+            </div>
+            <div role="drawer__dropdown" class="nav__drawer-dropdown">
+              <div class="nav__drawer-column">
+                <ul>
+                  <li>
+                    <a href="https://www.twilio.com/voice" class="nav__drawer-link nav__drawer-link--category">
+                      Voice &amp;Video
+                    </a>
+                  </li>
+                  <li><a href="https://www.twilio.com/voice" class="nav__drawer-link">Programmable Voice</a></li>
+                  <li><a href="https://www.twilio.com/video" class="nav__drawer-link">Programmable Video</a></li>
+                  <li><a href="https://www.twilio.com/sip-trunking" class="nav__drawer-link">Elastic SIP Trunking</a></li>
+                  <li><a href="https://www.twilio.com/taskrouter" class="nav__drawer-link">TaskRouter</a></li>
+                  <li><a href="https://www.twilio.com/stun-turn" class="nav__drawer-link">Network Traversal</a></li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="https://www.twilio.com/messaging" class="nav__drawer-link nav__drawer-link--category">
+                      Messagerie
+                    </a>
+                  </li>
+                  <li><a href="https://www.twilio.com/sms" class="nav__drawer-link">Programmable SMS</a></li>
+                  <li><a href="https://www.twilio.com/conversations-api" class="nav__drawer-link">Programmable Chat</a></li>
+                  <li><a href="https://www.twilio.com/notify" class="nav__drawer-link">Notify</a></li>
+                </ul>
+              </div>
+              <div class="nav__drawer-column">
+                <ul>
+                  <li>
+                    <div class="nav__drawer-link nav__drawer-link--category">Authentification</div>
+                  </li>
+                  <li><a href="https://www.twilio.com/en-us/trusted-activation/verify" class="nav__drawer-link">Verify Api</a></li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="nav__drawer-link nav__drawer-link--category">Connectivité</div>
+                  </li>
+                  <li><a href="https://www.twilio.com/lookup" class="nav__drawer-link">Lookup</a></li>
+                  <li><a href="https://www.twilio.com/phone-numbers" class="nav__drawer-link">Phone Numbers</a></li>
+                  <li><a href="https://www.twilio.com/iot/wireless" class="nav__drawer-link">Programmable Wireless</a></li>
+                  <li><a href="https://www.twilio.com/sync" class="nav__drawer-link">Sync</a></li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="nav__drawer-link nav__drawer-link--category">Marketplace</div>
+                  </li>
+                  <li><a href="https://showcase.twilio.com/" class="nav__drawer-link">Modules complémentaires</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="nav__drawer-link nav__drawer-link--category">Plateforme</div>
+                  </li>
+                  <li><a href="https://www.twilio.com/solutions/enterprise" class="nav__drawer-link">Forfait entreprise</a>
+                  </li>
+                  <li><a href="https://www.twilio.com/interconnect" class="nav__drawer-link">Interconnect</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="nav__drawer-section">
+            <div role="drawer__header" class="nav__drawer-header">Cas d'usage</div>
+            <div role="drawer__dropdown" class="nav__drawer-dropdown">
+              <ul>
+                <li>
+                  <a href="https://www.twilio.com/fr/blog/en-us/trusted-activation" class="nav__drawer-link nav__drawer-link--category">
+                    Sécurité d'accès
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twilio.com/solutions/text-marketing" class="nav__drawer-link nav__drawer-link--category">
+                    Marketing par appels &amp; SMS
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twilio.com/en-us/flex" class="nav__drawer-link nav__drawer-link--category">
+                    Collaboration
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twilio.com/proxy" class="nav__drawer-link nav__drawer-link--category">
+                    Communications commerciales
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twilio.com/en-us/flex" class="nav__drawer-link nav__drawer-link--category">
+                    Centre de contact
+                  </a>
+                </li>
+              </ul>
+              <hr>
+            </div>
+            <div>
+              <div class="nav__drawer-column">
+                <ul>
+                  <li>
+                    <a href="https://customers.twilio.com/" class="nav__drawer-link nav__drawer-link--small">
+                      Témoignages clients
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://showcase.twilio.com/" class="nav__drawer-link nav__drawer-link--small">
+                      Vitrine des partenaires
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twilio.com/what-is-cloud-communications?" class="nav__drawer-link nav__drawer-link--small">
+                      Pourquoi choisir Twilio ?
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twilio.com/support-plans" class="nav__drawer-link nav__drawer-link--small">
+                      Plans d'assistance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://status.twilio.com/" class="nav__drawer-link nav__drawer-link--small">
+                      Statut
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav__drawer-column">
+                <ul>
+                  <li>
+                    <a href="https://www.twilio.com/docs" class="nav__drawer-link nav__drawer-link--small">
+                      Documentation &amp; API
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twilio.com/blog" class="nav__drawer-link nav__drawer-link--small">
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://support.twilio.com/hc/en-us" class="nav__drawer-link nav__drawer-link--small">
+                      Aide
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twilio.com/fr/blog/en-us/company/jobs" class="nav__drawer-link nav__drawer-link--small">
+                      Emplois chez Twilio
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav__sales"><a href="https://www.twilio.com/help/sales" class="nav__sales-button">Contacter l'équipe commerciale</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="nav js-nav" role="nav" style="background-color: white !important;">
+  <a href="https://www.twilio.com/fr/blog" class="nav-title" data-glinktype="site navigation" data-glinklocation="blog" data-glinkname="logo">
+
+    <span class="nav-logo"></span>
+    <span class="nav-title-label">
+      
+      BLOG
+      
+    </span>
+  </a>
+  <ul class="nav-list">
+    
+    <li class="nav-list-item nav-docs">
+      <div class="blog-nav__language-picker-wrapper">
+        <button type="button" aria-expanded="false" aria-controls="languages-navigation" class="blog-nav__language-picker js-blog-nav__language-picker">
+          <img src="./Coder une saisie de numéros de téléphone internationaux_files/globe.f4c9be42b.svg" alt="" class="flag">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <span class="lang-picker-lang">Français</span>
+            
+          
+            
+          
+          <img src="./Coder une saisie de numéros de téléphone internationaux_files/lang-dd-arrow.f4c9be42b.svg" alt="" class="arrow">
+        </button>
+
+        <div id="languages-navigation" class="blog-nav__language-list-wrapper">
+          <ul class="blog-nav__language-list">
+            
+              
+                
+              
+                
+                  <li>
+                    <a href="https://www.twilio.com/ja/blog/international-phone-number-input-html-javascript-jp?save_locale=ja-jp" class="language" rel="nofollow">
+                      <span>日本語</span>
+                      
+                    </a>
+                  </li>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://www.twilio.com/de/blog/erstellen-eines-eingabefelds-fur-internationale-telefonnummern-html-javascript?save_locale=de-de" class="language" rel="nofollow">
+                      <span>Deutsch</span>
+                      
+                    </a>
+                  </li>
+                
+              
+                
+              
+                
+              
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="https://www.twilio.com/blog/international-phone-number-input-html-javascript?save_locale=en-us" class="language" rel="nofollow">
+                      <span>English</span>
+                      
+                    </a>
+                  </li>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://www.twilio.com/es-mx/blog/como-crear-entradas-internacionales-de-numeros-de-telefono-en-html-y-javascript?save_locale=es-mx" class="language" rel="nofollow">
+                      <span>Español (México)</span>
+                      
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript?save_locale=fr-fr" class="language" rel="nofollow">
+                      <span>Français</span>
+                      
+                      <img src="./Coder une saisie de numéros de téléphone internationaux_files/check.f4c9be42b.svg" alt="Selected language" class="selected-lang-check">
+                      
+                    </a>
+                  </li>
+                
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://www.twilio.com/pt-br/blog/como-criar-uma-campo-de-numero-de-telefone-internacional-em-html-e-javascript?save_locale=pt-br" class="language" rel="nofollow">
+                      <span>Português (Brasil)</span>
+                      
+                    </a>
+                  </li>
+                
+              
+                
+              
+            
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-list-item nav-docs">
+      <a href="https://www.twilio.com/docs" class="nav-link" data-glinktype="site navigation" data-glinklocation="blog" data-glinkname="docs &amp; help">
+        <svg class="icon-docs" stroke-miterlimit="10" width="11.8" height="14" viewBox="0 0 11.8 14">
+          <g fill="none" stroke="#F22F46">
+            <path d="M11.3 13.5H.5V.5h5.4l5.4 5.4z"></path>
+            <path d="M11.3 5.9H5.9V.5"></path>
+          </g>
+        </svg>
+
+        <span class="nav-docs-label">Documents</span>
+      </a>
+    </li>
+    <li class="nav-list-item nav-login toggle-on-login">
+      <a href="https://www.twilio.com/login" class="nav-link" data-glinktype="site navigation" data-glinklocation="blog" data-glinkname="log in">
+        <svg class="icon-login" width="10.2" height="13.5" viewBox="0 0 10.2 13.5">
+          <g fill="none" stroke="#F22F46" stroke-miterlimit="10">
+            <circle cx="5.1" cy="3" r="2.5"></circle>
+            <path d="M.5 13.5c0-2.5 2.1-4.6 4.6-4.6s4.6 2.1 4.6 4.6"></path>
+          </g>
+        </svg>
+
+        <span class="nav-login-label">Se connecter</span>
+      </a>
+    </li>
+    <li class="nav-list-item nav-signup toggle-on-login">
+      <a href="https://www.twilio.com/try-twilio" class="nav-link" data-glinktype="site navigation" data-glinklocation="blog" data-glinkname="sign up">
+        <svg class="icon-signup" width="13" height="13" viewBox="0 0 13 13">
+          <path fill="none" stroke="#F22F46" stroke-miterlimit="10" d="M0 6.5h13M6.5 0v13"></path>
+        </svg>
+
+        <span class="nav-signup-label">S'inscrire</span>
+      </a>
+    </li>
+    <li class="nav-list-item nav-console toggle-on-login hidden">
+      <a href="https://www.twilio.com/console" class="nav-link" data-glinktype="site navigation" data-glinklocation="blog" data-glinkname="console">
+        <svg class="icon-login" width="10.2" height="13.5" viewBox="0 0 10.2 13.5">
+          <g fill="none" stroke="#F22F46" stroke-miterlimit="10">
+            <circle cx="5.1" cy="3" r="2.5"></circle>
+            <path d="M.5 13.5c0-2.5 2.1-4.6 4.6-4.6s4.6 2.1 4.6 4.6"></path>
+          </g>
+        </svg>
+
+        <span class="nav-login-label">Console</span>
+      </a>
+    </li>
+    <li class="nav-list-item nav-dotcom">
+      <a href="https://www.twilio.com/" class="nav-link" data-glinktype="site navigation" data-glinklocation="blog" data-glinkname="twilio.com">
+        <svg class="icon-outbound-link" width="13" height="13" viewBox="0 0 13 13">
+          <path fill="none" stroke="#F22F46" stroke-miterlimit="10" d="M2 2.5h8.5V11M10 3l-8 8"></path>
+        </svg>
+
+        <span class="nav-dotcom-label">Twilio</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+    
+
+    
+      
+        
+
+<section class="cta js-cta">
+  <div class="cta-content inner-container">
+    <div class="cta-headline h3">
+        Construisez l'avenir des communications.
+    </div>
+    <a class="cta-action btn btn--outline-red" href="https://www.twilio.com/try-twilio" data-glinktype="cta-link" data-glinklocation="blog-hero" data-glinkname="signup-start-building-for-free">Commencez à construire gratuitement</a>
+  </div>
+</section>
+
+      
+    
+
+    
+
+    <main class="main inner-container">
+      <aside class="sidebar ">
+        
+          
+
+
+
+  <div class="search">
+    
+
+<form action="https://www.twilio.com/fr/blog/search" method="GET">
+  <div class="search">
+    <input class="input input--search search-input" type="search" name="q" placeholder="Rechercher">
+  </div>
+</form>
+
+  </div>
+
+
+
+  <div class="signup-to-build">
+    <p>Construisez l'avenir des communications. Commencez dès aujourd'hui avec les API et les services Twilio.</p>
+    <a class="btn btn--primary" href="https://www.twilio.com/try-twilio" data-glinktype="cta-link" data-glinklocation="blog-sidebar" data-glinkname="signup-start-building-for-free-2">Commencez à construire gratuitement</a>
+  </div>
+
+
+
+  <section class="tags">
+    <p class="tags-header">Publications par pile</p>
+    <ul class="js-blog-tags tags-list">
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=java" rel="nofollow">Java</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=php" rel="nofollow">PHP</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=ruby" rel="nofollow">Ruby</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=python" rel="nofollow">Python</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=net" rel="nofollow">.NET</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=swift" rel="nofollow">Swift</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=arduino" rel="nofollow">Arduino</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=go" rel="nofollow">go</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=javascript" rel="nofollow">JavaScript</a>
+        </li>
+      
+    </ul>
+  </section>
+
+
+
+  <section class="tags">
+    <p class="tags-header">Publications par produit</p>
+    <ul class="js-blog-tags tags-list">
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=email" rel="nofollow">Email</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=sms" rel="nofollow">SMS</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=voice" rel="nofollow">Voice</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=mms" rel="nofollow">MMS</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=video" rel="nofollow">Video</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=conversations" rel="nofollow">Conversations</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=iot" rel="nofollow">IoT</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=task-router" rel="nofollow">task router</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=verify" rel="nofollow">Verify</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=flex" rel="nofollow">Flex</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=sip" rel="nofollow">SIP</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=twilio-client" rel="nofollow">Twilio Client</a>
+        </li>
+      
+        <li>
+          <a class="js-blog-tag tag" href="https://www.twilio.com/fr/blog?tag=studio" rel="nofollow">Studio</a>
+        </li>
+      
+    </ul>
+  </section>
+
+
+
+  <section class="tags">
+    <p class="tags-header">Catégories</p>
+    <ul class="reset-list-style">
+      
+        <li>
+          <a class="js-blog-category tag-category" href="https://www.twilio.com/fr/blog?category=code-tutorials-and-hacks" rel="nofollow">
+            Code, Tutorials and Hacks
+          </a>
+        </li>
+      
+        <li>
+          <a class="js-blog-category tag-category" href="https://www.twilio.com/fr/blog?category=customer-highlights" rel="nofollow">
+            Customer Highlights
+          </a>
+        </li>
+      
+        <li>
+          <a class="js-blog-category tag-category" href="https://www.twilio.com/fr/blog?category=developers-drawing-the-owl" rel="nofollow">
+            Developers Drawing The Owl
+          </a>
+        </li>
+      
+        <li>
+          <a class="js-blog-category tag-category" href="https://www.twilio.com/fr/blog?category=life-inside-we-build-at-twilio" rel="nofollow">
+            Life Inside: We Build At Twilio
+          </a>
+        </li>
+      
+        <li>
+          <a class="js-blog-category tag-category" href="https://www.twilio.com/fr/blog?category=news" rel="nofollow">
+            News
+          </a>
+        </li>
+      
+        <li>
+          <a class="js-blog-category tag-category" href="https://www.twilio.com/fr/blog?category=stories-from-the-road" rel="nofollow">
+            Stories From The Road
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+
+
+
+  <div class="social-buttons">
+    <a class="btn btn--icon-twitter" href="https://twitter.com/twilio" target="_blank" title="Follow on Twitter">
+      <svg class="icon-twitter" width="17" height="13.7" viewBox="0 0 17 13.7"><path d="M17 1.6c-.6.3-1.3.5-2 .5.7-.4 1.3-1.1 1.5-1.9-.7.4-1.4.7-2.2.8-.6-.6-1.5-1-2.5-1-2 0-3.5 1.5-3.5 3.5 0 .3 0 .5.1.8C5.5 4.1 2.9 2.7 1.2.6.9 1.1.7 1.7.7 2.4c0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4C.7 6.6 1.9 8 3.5 8.3c-.3 0-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.7 2.4 3.3 2.4-1.2.9-2.7 1.5-4.3 1.5H.1c1.5 1 3.4 1.6 5.3 1.6 6.4 0 9.9-5.3 9.9-9.8v-.4c.6-.7 1.2-1.3 1.7-2"></path></svg>
+
+      Twitter
+    </a>
+    <a class="btn btn--icon-facebook" href="https://www.facebook.com/TeamTwilio" target="_blank" title="Follow on Facebook">
+      <svg class="icon-facebook" width="16" height="16" viewBox="0 0 16 16"><path d="M14.5 0h-13C.7 0 0 .7 0 1.5v13.1c0 .7.7 1.4 1.5 1.4H8V9.3H6v-2h2v-2c0-1.7.7-2.7 2.7-2.7h2v2h-.9c-.6 0-1.1.5-1.1 1.1v1.5h2.7l-.3 2h-2.3V16h3.9c.8 0 1.5-.7 1.5-1.5v-13C16 .7 15.3 0 14.5 0z"></path></svg>
+
+      Facebook
+    </a>
+  </div>
+
+
+
+<section class="subscribe">
+  <h3 class="subscribe-header">
+    Des témoignages de développeurs <br>dans votre boîte de réception.
+  </h3>
+
+  <p>Abonnez‑vous au Developer Digest, un dose mensuelle de l'univers du code.</p>
+    <form id="1451" novalidate="" _lpchecked="1" class=" bf_form_init" bf_offer_id="1481498250">
+        <div class="input-wrapper">
+          <input class="input__honey field-size-top-large" id="field0" name="field_Email" type="email" placeholder="Enter your email…" required="required">
+          <input class="input__email field-size-top-large" id="email" name="email" type="email" placeholder="Enter your email…" autocomplete="nope" required="required">
+          <aside class="error_message small">Saisissez une adresse e-mail valide.</aside>
+        </div>
+        <input type="hidden" id="uTMContentInquiry" name="field_uTMContentInquiry" value="">
+        <input type="hidden" id="uTMCampaignInquiry" name="field_uTMCampaignInquiry" value="">
+        <input type="hidden" id="uTMMediumInquiry" name="field_uTMMediumInquiry" value="">
+        <input type="hidden" id="uTMSourceInquiry" name="field_uTMSourceInquiry" value="">
+        <input type="hidden" id="uTMTermInquiry" name="field_uTMTermInquiry" value="">
+        <input type="hidden" id="previousPage" name="field_previousPage" value="">
+        <input type="hidden" id="assetPage" name="field_assetPage" value="">
+        <input type="hidden" id="heapID" name="field_heapID" value="">
+        <input type="hidden" id="gCLIDURL" name="field_gCLIDURL" value="">
+        <input type="hidden" id="gCLID" name="field_gCLID" value="">
+        <input type="hidden" id="Lead_Source_Most_Recent_ELOQUA__c" name="field_Lead_Source_Most_Recent_ELOQUA__c" value="Full Service Request">
+        <input type="hidden" id="underTwilioPrivacyPolicy" name="field_underTwilioPrivacyPolicy" value="true">
+        <button id="submit" type="submit">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" fill="#fff"></path></svg>
+          </span>
+          <span class="success">Tout est en place ! Consultez vos e‑mails.</span>
+        </button>
+    </form>
+  <p class="small">
+    Vous pouvez vous désabonner à tout moment en cliquant sur le lien de désabonnement figurant dans l'e‑mail récapitulatif. Consultez notre <a href="https://www.twilio.com/legal/privacy">politique de confidentialité</a> pour en savoir plus.
+  </p>
+</section>
+
+
+
+<a class="promo" href="https://www.twilio.com/docs/tutorials">
+  <div class="promo-callout">New!</div>
+  <div class="promo-content">
+    <div class="promo-headline"> Tutorials</div>
+    <div class="promo-body">
+      Des  applications types qui couvrent les cas d'usage courants dans plusieurs langues. Téléchargez‑les, testez‑les et ajustez‑les vous‑même.
+    </div>
+    <div class="promo-action link">Démarrer</div>
+  </div>
+</a>
+
+
+        
+        
+      </aside>
+
+      <section class="column">
+        
+          <ul class="article-list">
+        
+          
+          
+    
+      
+
+
+
+  <article class="article not-loaded">
+    <header class="article-header">
+      <div class="article-meta">
+        <div class="article-authors">
+          <img src="./Coder une saisie de numéros de téléphone internationaux_files/f079652d919a6e3bbab0c53c1f47825a.jpeg">
+          By
+          
+
+
+
+    <a href="https://www.twilio.com/fr/blog/author/krobinson">Kelley Robinson</a>
+
+          <span class="article-published">2021-02-01</span>
+        </div>
+        <div class="social-buttons">
+          <a class="btn btn--icon-twitter" href="https://twitter.com/intent/tweet?url=https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript&amp;text=Coder%20une%20saisie%20de%20num%C3%A9ros%20de%20t%C3%A9l%C3%A9phone%20internationaux&amp;via=twilio" target="_blank" title="Share on Twitter">
+            <svg class="icon-twitter" width="17" height="13.7" viewBox="0 0 17 13.7">
+              <path d="M17 1.6c-.6.3-1.3.5-2 .5.7-.4 1.3-1.1 1.5-1.9-.7.4-1.4.7-2.2.8-.6-.6-1.5-1-2.5-1-2 0-3.5 1.5-3.5 3.5 0 .3 0 .5.1.8C5.5 4.1 2.9 2.7 1.2.6.9 1.1.7 1.7.7 2.4c0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4C.7 6.6 1.9 8 3.5 8.3c-.3 0-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.7 2.4 3.3 2.4-1.2.9-2.7 1.5-4.3 1.5H.1c1.5 1 3.4 1.6 5.3 1.6 6.4 0 9.9-5.3 9.9-9.8v-.4c.6-.7 1.2-1.3 1.7-2"></path>
+            </svg>
+            Twitter
+          </a>
+          <a class="btn btn--icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript" target="_blank" title="Share on Facebook">
+            <svg class="icon-facebook" width="16" height="16" viewBox="0 0 16 16">
+              <path d="M14.5 0h-13C.7 0 0 .7 0 1.5v13.1c0 .7.7 1.4 1.5 1.4H8V9.3H6v-2h2v-2c0-1.7.7-2.7 2.7-2.7h2v2h-.9c-.6 0-1.1.5-1.1 1.1v1.5h2.7l-.3 2h-2.3V16h3.9c.8 0 1.5-.7 1.5-1.5v-13C16 .7 15.3 0 14.5 0z"></path>
+            </svg>
+            Facebook
+          </a>
+          <a class="btn btn--icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;source=Twilio%20Blog&amp;title=Coder%20une%20saisie%20de%20num%C3%A9ros%20de%20t%C3%A9l%C3%A9phone%20internationaux&amp;url=https://www.twilio.com/fr/blog/saisie-numeros-telephone-internationaux-html-javascript" target="_blank" title="Share on LinkedIn">
+            <svg class="icon-linkedin" width="16" height="16" viewBox="0 0 12 12">
+              <path d="M2.9,1.5C2.9,2.3,2.3,3,1.5,3C0.7,3,0,2.3,0,1.5C0,0.7,0.7,0,1.5,0C2.3,0,2.9,0.7,2.9,1.5z M2.7,4H0.2v8
+	h2.5V4z M6.7,4H4.3v8h2.4c0,0,0-3,0-4.2C6.7,6.7,7.2,6,8.2,6c0.9,0,1.3,0.6,1.3,1.8c0,1.2,0,4.2,0,4.2H12c0,0,0-2.9,0-5.1
+	c0-2.1-1.2-3.2-2.9-3.2c-1.7,0-2.4,1.3-2.4,1.3V4L6.7,4z"></path>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <h1 class="article-title">Coder une saisie de numéros de téléphone internationaux</h1>
+    </header>
+    <section class="article-content">
+      <p id="header_image">
+        
+
+
+
+    <picture><source srcset="https://assets.cdn.prod.twilio.com/images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvkt.width-808.format-webp.webp 808w, https://assets.cdn.prod.twilio.com/images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvk.width-1616.format-webp.webp 1200w" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnw.width-808.format-png.png 808w, https://assets.cdn.prod.twilio.com/images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktn.width-1616.format-png.png 1200w" type="image/png"><img src="./Coder une saisie de numéros de téléphone internationaux_files/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnwsx2jJcZw6zW.width-808.png" alt="Comment coder une saisie de numéros de téléphone internationaux avec HTML et JavaScript" height="404" width="808" loading="lazy" sizes="808px" srcset="https://assets.cdn.prod.twilio.com/images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnwsx2jJcZw6zW.width-808.png 808w, https://assets.cdn.prod.twilio.com/images/o3rDVPmgaaZ3khzVF-P3SjpxCSHU8Zvktnwsx2jJcZw6z.width-1616.png 1200w"></picture>
+
+
+      </p>
+      <div class="block-rich_text">
+
+<p>Les numéros de téléphone sont standardisés en un format international connu sous le nom de <a href="https://www.twilio.com/docs/glossary/what-e164">E.164</a>. Il combine les codes de pays et les numéros des abonnés sous la forme suivante : <strong>+14155552671</strong>. Ce format est requis par beaucoup d’APIs (dont celles de Twilio) et signifie que vous n’avez pas à stocker les codes de pays et les numéros de téléphone dans deux colonnes séparées de la base de données.</p>
+<p>Cependant, vous ne voulez probablement que vos utilisateurs aient à entrer un “+” et un code de pays lorsque qu’il saisissent leurs numéros de téléphone pour :</p>
+<ul>
+<li>S’inscrire en tant que nouvel utilisateur</li>
+<li><a href="https://www.twilio.com/blog/incentivize-2fa">Activer la 2FA par SMS</a></li>
+<li>Faire une demande de rappel d’un service client</li>
+<li>Souscrire aux notifications marketing</li>
+</ul>
+<p>Cet article vous accompagnera étape par étape pour coder un champ de saisie de numéros de téléphone pour traiter et parser les numéros de téléphones en utilisant du HTML basique, du JavaScript et le plugin <code>intl-tel-input</code>. Nous allons inclure des recommandations sur la vérification de téléphone et sur la prévention des fraudes.</p>
+<p>Vous pouvez trouver <a href="https://github.com/robinske/intl-tel-input-example">le code complet sur mon GitHub</a>.</p>
+<h2>Que peut faire le plugin intl-tel-input ?</h2>
+<p>Ce projet a une utilisation intensive de <a href="https://github.com/jackocnr/intl-tel-input">intl-tel-input</a> : un “plugin JavaScript pour saisir et valider les numéros de téléphones internationaux”. Je passerai en revue ma configuration habituelle du plugin, mais il y a des options additionnelles que vous pouvez parcourir <a href="https://github.com/jackocnr/intl-tel-input#features">dans la documentation</a>.</p>
+<p>Ce plugin fournit une liste déroulante des codes pays avec des jolis drapeaux pour représenter les différentes nations. Il traite aussi le numéro ou le “format national” de l’abonné pour normaliser la saisie de l’utilisateur - pouvant comprendre les espaces, les parenthèses, les tirets, etc...</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/TVOwssxJqQLZAvV--5pkI2NNypdSdUoBJBF5W_qraB8.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/TVOwssxJqQLZAvV--5pkI2NNypdSdUoBJBF5W_qraB8er.format-png.png" type="image/png"><img alt="champ de saisie de numero" class="richtext-image left" height="112" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/TVOwssxJqQLZAvV--5pkI2NNypdSdUoBJBF5W_qraB8er9.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/TVOwssxJqQLZAvV--5pkI2NNypdSdUoBJBF5W_qraB8er9.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/TVOwssxJqQLZAvV--5pkI2NNypdSdUoBJBF5W_qraB8er.width-1000.png 500w" width="500"></picture></p>
+<h2>Embarquer le plugin intl-tel-input dans votre code</h2>
+<p>On va faire simple ici, et commencer avec un peu de HTML et JavaScript vanilla. Créez un nouveau fichier appelé <code>index.html</code> et ajoutez le code suivant :</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-html"><pre class="twlo-code line-numbers language-html" tabindex="0"><code class="language-html"><span class="prism-token prism-doctype"><span class="prism-token prism-punctuation">&lt;!</span><span class="prism-token prism-doctype-tag">DOCTYPE</span> <span class="prism-token prism-name">html</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>html</span> <span class="prism-token prism-attr-name">lang</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>en<span class="prism-token prism-punctuation">"</span></span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>head</span><span class="prism-token prism-punctuation">&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>title</span><span class="prism-token prism-punctuation">&gt;</span></span>Saisie de numéros internationaux<span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>title</span><span class="prism-token prism-punctuation">&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>meta</span> <span class="prism-token prism-attr-name">name</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>viewport<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-attr-name">content</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>width=device-width, initial-scale=1<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-punctuation">/&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>link</span> <span class="prism-token prism-attr-name">rel</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>stylesheet<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-attr-name">href</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>styles.css<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-punctuation">/&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>link</span>
+     <span class="prism-token prism-attr-name">rel</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>stylesheet<span class="prism-token prism-punctuation">"</span></span>
+     <span class="prism-token prism-attr-name">href</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css<span class="prism-token prism-punctuation">"</span></span>
+   <span class="prism-token prism-punctuation">/&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>script</span> <span class="prism-token prism-attr-name">src</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js<span class="prism-token prism-punctuation">"</span></span><span class="prism-token prism-punctuation">&gt;</span></span><span class="prism-token prism-script"></span><span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>script</span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>head</span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>body</span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>body</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>html</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>Ce code récpère les versions CDN du CSS et JS du plugin, ce qui aide à afficher la liste des codes de pays et traite les numéros de téléphone. J’utilise la version 17.0.8, mais vous pouvez trouver la dernière version en regardant les <a href="https://github.com/jackocnr/intl-tel-input/tags">tags</a>. Vous pouvez aussi installer le plugin avec un <a href="https://github.com/jackocnr/intl-tel-input#getting-started-using-a-bundler-eg-webpack">bundler</a> ou <a href="https://github.com/jackocnr/intl-tel-input#getting-started-not-using-a-bundler">télécharger</a> et héberger le code source vous-même.</p>
+<p>Pour un rendu plus élégant, créez un nouveau fichier appelé <code>styles.css</code> dans le même dossier et ajoutez le <a href="https://github.com/robinske/intl-tel-input-example/blob/main/assets/styles.css">CSS que vous pouvez trouver ici.</a></p>
+<p>Ensuite, ajoutez le formulaire qui contiendra la saisie de numéro de téléphone. Dans les tags <code>body</code> du fichier <code>index.html</code>, ajoutez le code HTML suivant :</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-html"><pre class="twlo-code line-numbers language-html" tabindex="0"><code class="language-html"><span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>div</span> <span class="prism-token prism-attr-name">class</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>container<span class="prism-token prism-punctuation">"</span></span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>form</span> <span class="prism-token prism-attr-name">id</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>login<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-special-attr"><span class="prism-token prism-attr-name">onsubmit</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span><span class="prism-token prism-value prism-javascript prism-language-javascript"><span class="prism-token prism-function">process</span><span class="prism-token prism-punctuation">(</span>event<span class="prism-token prism-punctuation">)</span></span><span class="prism-token prism-punctuation">"</span></span></span><span class="prism-token prism-punctuation">&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>p</span><span class="prism-token prism-punctuation">&gt;</span></span>Entrez votre numéro de téléphone:<span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>p</span><span class="prism-token prism-punctuation">&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>input</span> <span class="prism-token prism-attr-name">id</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>phone<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-attr-name">type</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>tel<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-attr-name">name</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>phone<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-punctuation">/&gt;</span></span>
+   <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>input</span> <span class="prism-token prism-attr-name">type</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>submit<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-attr-name">class</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>btn<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-attr-name">value</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>Vérifier<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-punctuation">/&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>form</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>div</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>A ce stade si vous chargez ce code dans un navigateur, vous verrez le champ du formulaire mais il n’y a pas encore de formatage. Nous avons toujours besoin d’intitialiser le plugin.</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/7oeLZYRyE7UJmXDJ_2OHFszMLVJAORw8SbNQPfTXdRH.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/7oeLZYRyE7UJmXDJ_2OHFszMLVJAORw8SbNQPfTXdRHWG.format-png.png" type="image/png"><img alt="champ de saisie du numéro de téléphone qui n&amp;#x27;a pas de formatage spécial" class="richtext-image left" height="216" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/7oeLZYRyE7UJmXDJ_2OHFszMLVJAORw8SbNQPfTXdRHWGA.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/7oeLZYRyE7UJmXDJ_2OHFszMLVJAORw8SbNQPfTXdRHWGA.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/7oeLZYRyE7UJmXDJ_2OHFszMLVJAORw8SbNQPfTXdRHWG.width-1000.png 500w" width="500"></picture></p>
+<h2>Initialiser le plugin intl-tel-input</h2>
+<p>Ajoutez un tag script en dessous du body mais dans le HTML, puis ajoutez le code d’initialisation suivant :</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-html"><pre class="twlo-code line-numbers language-html" tabindex="0"><code class="language-html"> <span class="prism-token prism-comment">&lt;!-- ^^  code du formulaire  ^^ --&gt;</span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>body</span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>script</span><span class="prism-token prism-punctuation">&gt;</span></span><span class="prism-token prism-script"><span class="prism-token prism-language-javascript">
+   <span class="prism-token prism-keyword prism-keyword-const">const</span> phoneInputField <span class="prism-token prism-operator">=</span> document<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">querySelector</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-string">"#phone"</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+   <span class="prism-token prism-keyword prism-keyword-const">const</span> phoneInput <span class="prism-token prism-operator">=</span> window<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">intlTelInput</span><span class="prism-token prism-punctuation">(</span>phoneInputField<span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-punctuation">{</span>
+     <span class="prism-token prism-literal-property prism-property">utilsScript</span><span class="prism-token prism-operator">:</span>
+       <span class="prism-token prism-string">"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"</span><span class="prism-token prism-punctuation">,</span>
+   <span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+ </span></span><span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>script</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>html</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>Le <code>utilsScript</code> est, en principe, optionnel, mais il offre beaucoup de fonctionnalités très utiles comme les espaces pour les spécificités du pays et le format E.164 que l’on utilisera plus bas.</p>
+<p>Rechargez la page et vous devriez maintenant voir le sélecteur de pays et un espace :</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/dxWJftEDiXhE4GD7-lduTWLzSJM1l5CpGt9TQhelsAW.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/dxWJftEDiXhE4GD7-lduTWLzSJM1l5CpGt9TQhelsAW-9.format-png.png" type="image/png"><img alt="champ de saisie du numéro de téléphone avec le drapeau américain et la liste déroulante du code de pays, y compris le texte d&amp;#x27;espace réservé pour un numéro de téléphone" class="richtext-image left" height="212" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/dxWJftEDiXhE4GD7-lduTWLzSJM1l5CpGt9TQhelsAW-9V.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/dxWJftEDiXhE4GD7-lduTWLzSJM1l5CpGt9TQhelsAW-9V.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/dxWJftEDiXhE4GD7-lduTWLzSJM1l5CpGt9TQhelsAW-9.width-1000.png 500w" width="500"></picture></p>
+<h2>Traiter la saisie de numéro de téléphone pour qu’elle ait le format international</h2>
+<p>Ajoutez une bannière d’alerte en dessous de votre formulaire. Cela vous aidera à afficher les résultats.</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-html"><pre class="twlo-code line-numbers language-html" tabindex="0"><code class="language-html"> <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>form</span><span class="prism-token prism-punctuation">&gt;</span></span>
+ <span class="prism-token prism-comment">&lt;!-- ^^  code du formulaire  ^^ --&gt;</span>
+ <span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;</span>div</span> <span class="prism-token prism-attr-name">class</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span>alert alert-info<span class="prism-token prism-punctuation">"</span></span> <span class="prism-token prism-special-attr"><span class="prism-token prism-attr-name">style</span><span class="prism-token prism-attr-value"><span class="prism-token prism-punctuation prism-attr-equals">=</span><span class="prism-token prism-punctuation">"</span><span class="prism-token prism-value prism-css prism-language-css"><span class="prism-token prism-property">display</span><span class="prism-token prism-punctuation">:</span> none<span class="prism-token prism-punctuation">;</span></span><span class="prism-token prism-punctuation">"</span></span></span><span class="prism-token prism-punctuation">&gt;</span></span><span class="prism-token prism-tag"><span class="prism-token prism-tag"><span class="prism-token prism-punctuation">&lt;/</span>div</span><span class="prism-token prism-punctuation">&gt;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>Ensuite, ajoutez une fonction pour gérer la soumission du formulaire. Dans le tag <code>&lt;script&gt;</code> et après l’initialisation du plugin, ajoutez :</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-javascript"><pre class="twlo-code line-numbers language-javascript" tabindex="0"><code class="language-javascript"><span class="prism-token prism-keyword prism-keyword-const">const</span> info <span class="prism-token prism-operator">=</span> document<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">querySelector</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-string">".alert-info"</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+
+<span class="prism-token prism-keyword prism-keyword-function">function</span> <span class="prism-token prism-function">process</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-parameter">event</span><span class="prism-token prism-punctuation">)</span> <span class="prism-token prism-punctuation">{</span>
+ event<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">preventDefault</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+
+ <span class="prism-token prism-keyword prism-keyword-const">const</span> phoneNumber <span class="prism-token prism-operator">=</span> phoneInput<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">getNumber</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+
+ info<span class="prism-token prism-punctuation">.</span>style<span class="prism-token prism-punctuation">.</span>display <span class="prism-token prism-operator">=</span> <span class="prism-token prism-string">""</span><span class="prism-token prism-punctuation">;</span>
+ info<span class="prism-token prism-punctuation">.</span>innerHTML <span class="prism-token prism-operator">=</span> <span class="prism-token prism-template-string"><span class="prism-token prism-template-punctuation prism-string">`</span><span class="prism-token prism-string">Phone number in E.164 format: &lt;strong&gt;</span><span class="prism-token prism-interpolation"><span class="prism-token prism-interpolation-punctuation prism-punctuation">${</span>phoneNumber<span class="prism-token prism-interpolation-punctuation prism-punctuation">}</span></span><span class="prism-token prism-string">&lt;/strong&gt;</span><span class="prism-token prism-template-punctuation prism-string">`</span></span><span class="prism-token prism-punctuation">;</span>
+<span class="prism-token prism-punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>La partie la plus importante ici est le <code>phoneInput.getNumber()</code> - c’est le code plugin qui convertit le code de pays sélectionné et la saisie de l’utilisateur en un numéro de téléphone au format international.</p>
+<p>Rechargez la page et entrez un numéro de téléphone et vous devriez voir le format international !</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/1pozMhchd3ta_KACaC9O4UuBG8xVwQ3qKkV540oCBEu.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/1pozMhchd3ta_KACaC9O4UuBG8xVwQ3qKkV540oCBEuWE.format-png.png" type="image/png"><img alt="saisie du numéro de téléphone avec succès au format E.164" class="richtext-image left" height="193" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/1pozMhchd3ta_KACaC9O4UuBG8xVwQ3qKkV540oCBEuWEB.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/1pozMhchd3ta_KACaC9O4UuBG8xVwQ3qKkV540oCBEuWEB.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/1pozMhchd3ta_KACaC9O4UuBG8xVwQ3qKkV540oCBEuWE.width-1000.png 500w" width="500"></picture></p>
+<h2>Bonus : Rendez le plugin conscient de la localisation</h2>
+<p>Le plugin se paramètre par défaut aux US, mais vous l’implémentez probablement parce que vous avez des utilisateurs internationaux. Vous pouvez mettre à jour ces paramètres et les passer sur la localisation de l’utilisateur basée sur son adresse IP.</p>
+<p>Créez-vous un compte gratuit sur <a href="https://ipinfo.io/">IPinfo</a> et récupérez votre token d’accès. Pour ça, vous pouvez utiliser une API d’adresse IP différente si jamais vous en avez une favorite. Ajoutez la fonction suivante en haut de votre tag <code>&lt;script&gt;</code> avant de définir l’objet <code>phoneInputField</code> :</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-javascript"><pre class="twlo-code line-numbers language-javascript" tabindex="0"><code class="language-javascript"><span class="prism-token prism-keyword prism-keyword-function">function</span> <span class="prism-token prism-function">getIp</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-parameter">callback</span><span class="prism-token prism-punctuation">)</span> <span class="prism-token prism-punctuation">{</span>
+ <span class="prism-token prism-function">fetch</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-string">'https://ipinfo.io/json?token=&lt;votre token&gt;'</span><span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-punctuation">{</span> <span class="prism-token prism-literal-property prism-property">headers</span><span class="prism-token prism-operator">:</span> <span class="prism-token prism-punctuation">{</span> <span class="prism-token prism-string-property prism-property">'Accept'</span><span class="prism-token prism-operator">:</span> <span class="prism-token prism-string">'application/json'</span> <span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">)</span>
+   <span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">then</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-parameter">resp</span><span class="prism-token prism-punctuation">)</span> <span class="prism-token prism-operator">=&gt;</span> resp<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">json</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">)</span>
+   <span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">catch</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">)</span> <span class="prism-token prism-operator">=&gt;</span> <span class="prism-token prism-punctuation">{</span>
+     <span class="prism-token prism-keyword prism-keyword-return">return</span> <span class="prism-token prism-punctuation">{</span>
+       <span class="prism-token prism-literal-property prism-property">country</span><span class="prism-token prism-operator">:</span> <span class="prism-token prism-string">'us'</span><span class="prism-token prism-punctuation">,</span>
+     <span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">;</span>
+   <span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">)</span>
+   <span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">then</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-punctuation">(</span><span class="prism-token prism-parameter">resp</span><span class="prism-token prism-punctuation">)</span> <span class="prism-token prism-operator">=&gt;</span> <span class="prism-token prism-function">callback</span><span class="prism-token prism-punctuation">(</span>resp<span class="prism-token prism-punctuation">.</span>country<span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+<span class="prism-token prism-punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>Ensuite, actualisez l’initialisation de intl-tel-input pour inclure deux paramètres : <code>initialCountry: "auto"</code> et <code>geoIpLookup: getIp</code>.</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-javascript"><pre class="twlo-code line-numbers language-javascript" tabindex="0"><code class="language-javascript"><span class="prism-token prism-keyword prism-keyword-const">const</span> phoneInput <span class="prism-token prism-operator">=</span> window<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">intlTelInput</span><span class="prism-token prism-punctuation">(</span>phoneInputField<span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-punctuation">{</span>
+ <span class="prism-token prism-literal-property prism-property">initialCountry</span><span class="prism-token prism-operator">:</span> <span class="prism-token prism-string">"auto"</span><span class="prism-token prism-punctuation">,</span>
+ <span class="prism-token prism-literal-property prism-property">geoIpLookup</span><span class="prism-token prism-operator">:</span> getIp<span class="prism-token prism-punctuation">,</span>
+ <span class="prism-token prism-literal-property prism-property">utilsScript</span><span class="prism-token prism-operator">:</span>
+   <span class="prism-token prism-string">"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"</span><span class="prism-token prism-punctuation">,</span>
+<span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<p>Maintenant, si je paramètre mon VPN en Autriche, le plugin actualise le pays par défaut.</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/iKknd7wWQxTATjqJ6hx8PFWfo0ZZawqGWXfPViYQlTp.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/iKknd7wWQxTATjqJ6hx8PFWfo0ZZawqGWXfPViYQlTpng.format-png.png" type="image/png"><img alt="saisie du numéro de téléphone affichant le drapeau autrichien" class="richtext-image left" height="147" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/iKknd7wWQxTATjqJ6hx8PFWfo0ZZawqGWXfPViYQlTpngq.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/iKknd7wWQxTATjqJ6hx8PFWfo0ZZawqGWXfPViYQlTpngq.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/iKknd7wWQxTATjqJ6hx8PFWfo0ZZawqGWXfPViYQlTpng.width-1000.png 500w" width="500"></picture></p>
+<h2>Bonus : ajouter des pays préférés</h2>
+<p>Une autre de mes fonctionnalités préférées est le paramètre “preferred countries” (pays préférés). Il permet de spécifier les pays qui apparaîtront en haut de la liste déroulante. Par exemple, j’ai identifié que la plupart de mes utilisateurs se trouvent aux Etats-Unis, en Colombie, en Inde, et en Allemagne, j’ai alors priorisé ces options pour qu’elles soient en haut de liste.</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/kRs6y2RFi-ksAWHW953eIr6bpnJDFjyCclp6hn_Rwjv.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/kRs6y2RFi-ksAWHW953eIr6bpnJDFjyCclp6hn_RwjvMy.format-png.png" type="image/png"><img alt="saisie du numéro de téléphone affichant quatre pays préférés en haut d&amp;#x27;une liste déroulante" class="richtext-image left" height="196" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/kRs6y2RFi-ksAWHW953eIr6bpnJDFjyCclp6hn_RwjvMy8.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/kRs6y2RFi-ksAWHW953eIr6bpnJDFjyCclp6hn_RwjvMy8.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/kRs6y2RFi-ksAWHW953eIr6bpnJDFjyCclp6hn_RwjvMy.width-1000.png 500w" width="500"></picture></p>
+<p>Vous pouvez actualiser ce paramètre là où vous initialisez le plugin en ajoutant un tableau de <code>preferredCountries</code> dans le <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">format de code ISO 3166-1 alpha-2</a>:</p>
+</div>
+<div class="block-markdown">
+
+<div class="markdown">
+    <div class="language-javascript"><pre class="twlo-code line-numbers language-javascript" tabindex="0"><code class="language-javascript"><span class="prism-token prism-keyword prism-keyword-const">const</span> phoneInput <span class="prism-token prism-operator">=</span> window<span class="prism-token prism-punctuation">.</span><span class="prism-token prism-function">intlTelInput</span><span class="prism-token prism-punctuation">(</span>phoneInputField<span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-punctuation">{</span>
+  <span class="prism-token prism-literal-property prism-property">preferredCountries</span><span class="prism-token prism-operator">:</span> <span class="prism-token prism-punctuation">[</span><span class="prism-token prism-string">"us"</span><span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-string">"co"</span><span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-string">"in"</span><span class="prism-token prism-punctuation">,</span> <span class="prism-token prism-string">"de"</span><span class="prism-token prism-punctuation">]</span><span class="prism-token prism-punctuation">,</span>
+  <span class="prism-token prism-literal-property prism-property">utilsScript</span><span class="prism-token prism-operator">:</span>
+    <span class="prism-token prism-string">"https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"</span><span class="prism-token prism-punctuation">,</span>
+<span class="prism-token prism-punctuation">}</span><span class="prism-token prism-punctuation">)</span><span class="prism-token prism-punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><span class="clipboard"><span class="clipboard-label hidden"></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="clipboard-icon"><path fill="currentColor" d="M16 7v2h-5v2L8 8l3-3v2h5zM8 5H4v1h4V5zm-4 7h5v-1H4v1zm9-1h1v3H2V0h12v5h-1V3H3v10h10v-2zM3 2h10V1H3v1zm1 7v1h3V9H4zm0-1h3V7H4v1z"></path></svg></span></div>
+</div>
+</div>
+<div class="block-rich_text">
+
+<h2>Vérifier une saisie de numéro de téléphone</h2>
+<p>Vous remarquerez peut-être que ce formulaire ne permet pas encore de détecter les numéros de téléphone invalides. Vous pouvez allez voir <a href="https://www.twilio.com/blog/validate-phone-number-input">ce post sur comment vérifier une saisie de numéros de téléphone</a> afin d’éviter que des personnes ne rentrent ce genre de numéro :</p>
+<p><picture><source srcset="https://assets.cdn.prod.twilio.com/images/N1FFFKAAzpbvxKvL71kmeuPsEWlMx5Gfmx51AxTwSPy.format-webp.webp" type="image/webp"><source srcset="https://assets.cdn.prod.twilio.com/images/N1FFFKAAzpbvxKvL71kmeuPsEWlMx5Gfmx51AxTwSPyfu.format-png.png" type="image/png"><img alt="Saisie du numéro de téléphone invalide" class="richtext-image left" height="266" sizes="500px" src="./Coder une saisie de numéros de téléphone internationaux_files/N1FFFKAAzpbvxKvL71kmeuPsEWlMx5Gfmx51AxTwSPyfur.width-500.png" srcset="https://assets.cdn.prod.twilio.com/images/N1FFFKAAzpbvxKvL71kmeuPsEWlMx5Gfmx51AxTwSPyfur.width-500.png 500w, https://assets.cdn.prod.twilio.com/images/N1FFFKAAzpbvxKvL71kmeuPsEWlMx5Gfmx51AxTwSPyfu.width-1000.png 500w" width="500"></picture></p>
+<h2>Les bonnes pratiques pour la vérification de téléphone</h2>
+<p>Vous voulez certainement normaliser les numéros de téléphone au format E.164 mais si vous prévoyez de stocker ces numéros, vous voulez aussi pouvoir réaliser une vérification de téléphone. Elles aident à garantir que l’utilisateur n’a pas accidentellement entré un numéro erroné, qu’ils possèdent bien le numéro qu’ils ont associé à leur compte, et que vous soyez pas en train de spammer la mauvaise personne... vous avez compris l’idée. Heureusement, <a href="https://www.twilio.com/docs/verify/api">l’API Twilio Verify</a> rend facile la vérification de téléphone par SMS ou appel. Regardez <a href="https://www.twilio.com/code-exchange/one-time-passcode-verification-otp">ce projet sur notre Code Exchange</a> pour apprendre à implémenter les mots de passe à usage unique (OTP)... Vous avez déjà fait la moitié avec le champ de saisie de numéro de téléphone!</p>
+<p>Vous pourriez aussi être intéressés par :</p>
+<ul>
+<li><a href="https://www.twilio.com/docs/lookup/api">La documentation de l’API Twilio Lookup</a></li>
+<li><a href="https://www.twilio.com/blog/serverless-phone-verification">La vérification de téléphone serverless avec Twilio Verify</a></li>
+<li><a href="https://www.twilio.com/blog/incentivize-2fa">Comment encourager les utilisateurs à activer la 2FA?</a></li>
+<li><a href="https://www.twilio.com/blog/stripe-fast-checkout-sms-verify">Comment construire un système de paiement rapide avec vérification par SMS en utilisant Stripe et Twilio</a></li>
+</ul>
+<p>Des questions sur la saisie de numéro de téléphone et sur la vérification ? Vous pouvez me trouver sur Twitter <a href="https://twitter.com/kelleyrobinson">@kelleyrobinson</a>. J’ai hâte de voir ce que vous allez construire.</p>
+</div>
+      
+      <div class="article-columns">
+        <div class="article-column">
+          
+
+<section class="rating-wrapper">
+  <div class="rating-box">
+    <fieldset class="star-rating js-star-rating">
+      <legend class="rating-label">Rate this post</legend>
+
+      <div class="js-rating-container">
+        
+          <input type="radio" name="rating" value="1" id="rating1-1">
+          <label for="rating1-1"><span>1</span></label>
+        
+          <input type="radio" name="rating" value="2" id="rating2-1">
+          <label for="rating2-1"><span>2</span></label>
+        
+          <input type="radio" name="rating" value="3" id="rating3-1">
+          <label for="rating3-1"><span>3</span></label>
+        
+          <input type="radio" name="rating" value="4" id="rating4-1">
+          <label for="rating4-1"><span>4</span></label>
+        
+          <input type="radio" name="rating" value="5" id="rating5-1">
+          <label for="rating5-1"><span>5</span></label>
+        
+      </div>
+    </fieldset>
+  </div>
+</section>
+
+
+        </div>
+        <div class="article-column">
+          <div class="article-coauthors">
+            <div class="article-coauthors-label">Auteurs</div>
+            <ul class="article-coauthors-list">
+              <li>
+                <img src="./Coder une saisie de numéros de téléphone internationaux_files/f079652d919a6e3bbab0c53c1f47825a.jpeg">
+                
+
+
+
+    <a href="https://www.twilio.com/fr/blog/author/krobinson">Kelley Robinson</a>
+
+              </li>
+              
+                
+              
+            </ul>
+          </div>
+          
+            <div class="article-coauthors">
+              <div class="article-coauthors-label">Réviseurs</div>
+              <ul class="article-coauthors-list">
+                
+                  <li>
+                    <img src="./Coder une saisie de numéros de téléphone internationaux_files/XH011791.max-40x40.jpg">
+                    
+
+
+
+    <a href="https://www.twilio.com/fr/blog/author/dphan">Diane Phan</a>
+
+                  </li>
+                
+                  <li>
+                    <img src="./Coder une saisie de numéros de téléphone internationaux_files/31f35e3f89e67ad35a2c4d0fa8a00080">
+                    
+
+
+
+    <a href="https://www.twilio.com/fr/blog/author/lmoy">Liz Moy</a>
+
+                  </li>
+                
+              </ul>
+            </div>
+            </div>
+            </div>
+          
+
+      
+
+      
+
+      
+    </section>
+  </article>
+
+
+    
+
+        
+          </ul>
+        
+      </section>
+    </main>
+
+    
+    <div class="prefooter">
+      
+        <a class="btn btn-large" href="https://www.twilio.com/try-twilio" data-glinktype="cta-link" data-glinklocation="blog-footer" data-glinkname="signup-sign-up-start-building">S'inscrire gratuitement</a>
+        <div class="secondary-action">
+          Pas encore prêt ?
+          <a href="https://www.twilio.com/help/sales" class="underline" data-glinktype="cta-link" data-glinklocation="blog-footer" data-glinkname="sales-talk-to-an-expert">
+            Échangez avec un expert.
+          </a>
+        </div>
+      
+    </div>
+    
+
+
+
+
+
+<footer class="twlo-footer">
+  <div class="twlo-footer__logo" title="Twilio">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+      <path fill="currentColor" d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm0 26C8.9 26 4 21.1 4 15S8.9 4 15 4s11 4.9 11 11-4.9 11-11 11z"></path>
+      <circle fill="currentColor" cx="18.7" cy="11.3" r="3.1"></circle>
+      <circle fill="currentColor" cx="18.7" cy="18.7" r="3.1"></circle>
+      <circle fill="currentColor" cx="11.3" cy="18.7" r="3.1"></circle>
+      <circle fill="currentColor" cx="11.3" cy="11.3" r="3.1"></circle>
+    </svg>
+  </div>
+  <ul class="twlo-footer__list">
+    <li class="twlo-footer__list-item">
+	
+		<a href="https://www.twilio.com/company" class="twlo-footer__link">À propos</a>
+	
+    </li>
+    <li class="twlo-footer__list-item">
+      <a href="https://www.twilio.com/legal/tos" class="twlo-footer__link">Mentions légales</a>
+    </li>
+    <li class="twlo-footer__list-item">
+      Copyright © 2023 Twilio Inc.
+    </li>
+    <li class="twlo-footer__list-item">
+      Tous droits réservés.
+    </li>
+    <li class="twlo-footer__list-item">
+      Protected by reCAPTCHA – <a href="https://policies.google.com/privacy" target="_blank" class="legal__link">Privacy</a> – <a href="https://policies.google.com/terms" target="_blank" class="legal__link">Terms</a>
+    </li>
+  </ul>
+</footer>
+
+
+
+    
+
+
+  <div id="feedback-form-modal" class="twlo-modal-overlay">
+    <form id="feedback" method="POST" action="https://www.twilio.com/docs/submit-feedback">
+      <div class="twlo-modal">
+        <span class="twlo-modal__close close">
+          <svg class="icon-close" fill="#233659" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M15 4l-5 5 5 5v1h-1l-5-5-5 5H3v-1l5-5-5-5V3h1l5 5 5-5h1v1z"></path>
+          </svg>
+        </span>
+        <h2 class="twlo-modal__title">Thanks for rating this post!</h2>
+        <p class="twlo-modal__body">
+Nous nous efforçons en permanence d'améliorer la qualité de notre blog et vos commentaires nous sont précieux. Comment cette publication pourrait‑elle mieux vous aider ?
+</p>
+
+        
+
+<input type="hidden" name="star_rating" value="">
+<input type="hidden" name="feedback_id" value="">
+<input type="hidden" name="page" value="32963">
+<input type="hidden" name="page_live_revision" value="493235">
+<input type="hidden" name="requested_path" value="/fr/blog/saisie-numeros-telephone-internationaux-html-javascript">
+
+<input type="hidden" name="csrfmiddlewaretoken" value="3nVnbZIxx2iKEwkrYSBXomH1V82HwIWukU0GlaSQWMTY4MzUwOTMwNi4wNjU5Mw=">
+<input type="hidden" name="recaptcha" value="">
+
+
+<div class="feedback-countries hidden">
+    <label for="countries">Le cas échéant, indiquez les pays dans lesquels vous utilisez Twilio</label><br>
+    <input id="countries" name="countries" value=""><br>
+</div>
+
+
+
+<div class="twlo-modal__form">
+    <div id="feedback-negative-form-fields">
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="negative_first_option" id="feedback-negative-form-option-one">
+            <label for="feedback-negative-form-option-one">Information ou code manquant</label>
+        </div>
+    
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="negative_second_option" id="feedbac-knegative-form-option-two">
+            <label for="feedbac-knegative-form-option-two">Le contenu est confus ou difficile à suivre</label>
+        </div>
+    
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="negative_third_option" id="feedback-negative-form-option-three">
+            <label for="feedback-negative-form-option-three">Informations inexactes ou obsolètes</label>
+        </div>
+    
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="negative_fourth_option" id="feedback-negative-form-option-four">
+            <label for="feedback-negative-form-option-four">Lien rompu ou faute de frappe</label>
+        </div>
+
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="negative_fifth_option" id="feedback-negative-form-option-five">
+            <label for="feedback-negative-form-option-five">N'a pas résolu mon problème</label>
+        </div>
+    </div>
+    
+    <div id="feedback-positive-form-fields">
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="positive_first_option" id="feedback-positive-form-option-one">
+            <label for="feedback-positive-form-option-one">Le contenu est facile à suivre</label>
+        </div>
+    
+        <div class="twlo-modal__form-options">
+            <input type="checkbox" class="twlo-modal__form-options-input" name="positive_second_option" id="feedback-positive-form-option-two">
+            <label for="feedback-positive-form-option-two">A résolu mon problème</label>
+        </div>
+    </div>
+
+    <div class="twlo-modal__form-options">
+        <input type="checkbox" class="twlo-modal__form-options-input" name="other_option" id="feedback-form-other-option">
+        <label for="feedback-form-other-option">Autre</label>
+    </div>
+</div>
+
+
+
+<textarea class="twlo-modal__textarea" name="comment" id="feedback-form-text-area" placeholder="Suggestions..."></textarea>
+
+<button id="feedback-submit-btn" type="button" class="twlo-btn">Envoyez‑nous vos suggestions</button>
+
+
+        <div class="twlo-modal__footer">
+          
+          <div class="rc-anchor-pt">
+            Protégé par reCAPTCHA – <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Confidentialité</a><span aria-hidden="true" role="presentation"> - </span><a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Conditions</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="sending-feedback-modal" class="twlo-modal-overlay">
+    <div class="twlo-loading loading-no-bg">
+      <div class="twlo-loading__inner">
+        <div class="twlo-loading__spinner">
+          <svg>
+            <circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+          </svg>
+        </div>
+        <div class="twlo-loading__message">
+          Envoi de vos commentaires...
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feedback-sent-modal" class="twlo-modal-overlay">
+    <div class="twlo-modal__submit-message">
+      🎉 Merci pour vos commentaires!
+    </div>
+  </div>
+  <div id="feedback-error-modal" class="twlo-modal-overlay">
+    <div class="twlo-modal__submit-message">
+      Une erreur s'est produite. Veuillez réessayer.
+    </div>
+  </div>
+
+
+
+
+
+    
+    <script src="./Coder une saisie de numéros de téléphone internationaux_files/vendor.min.f4c9be42b.js.téléchargement" async=""></script>
+
+    
+      <script src="./Coder une saisie de numéros de téléphone internationaux_files/blog.min.f4c9be42b.js.téléchargement" async=""></script>
+    
+
+    
+    
+
+    
+
+
+    
+
+    <!-- Initialize recaptcha v3 -->
+<script src="./Coder une saisie de numéros de téléphone internationaux_files/api.js.téléchargement"></script>
+<script type="application/javascript">window.reCAPTCHASiteKey = "6LeB76EdAAAAAMFifakt7llHwwjJfXE2goTVnoKT";</script>
+
+
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript" src="./Coder une saisie de numéros de téléphone internationaux_files/widgets.js.téléchargement"></script>
+    <script type="text/javascript">
+    window.twilio.SIGNUP_LINK_PATTERNS = [ new RegExp('^https?:\/\/(www.)?twilio.com\/try-twilio'), ]
+</script>
+    <script> fitvids() </script>
+    
+      
+
+	
+		
+      
+      
+      
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MWRD6S"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>
+         !function t(e){var o,n,a,r,c;let i=window,l=document,s="script",g="dataLayer",m=l.getElementsByTagName(s)[0];
+         i[g]=i[g]||[];let p=()=>{throw i.trustarcDown=!0,h(),Error("TrustArc is not loading correctly")},
+         h=()=>{let t=l.getElementsByTagName(s)[0];i[g].push({"gtm.start":new Date().getTime(),event:"gtm.js"});
+         let o=l.createElement(s);o.async=!0,o.src="//www.googletagmanager.com/gtm.js?id="+e+("dataLayer"!=g?"&l="+g:""),
+         o.onerror=()=>{i.disableAF&&i.disableAF()},t.parentNode.insertBefore(o,t)};
+         o={REDACTION_COPY:{EMAIL:"EMAIL_REDACTED"}},n=function t(){for(var e,o=[],n=/([^&=]+)=?([^&]*)/g,
+            a=window.location.search.substring(1);e=n.exec(a);)
+            o.push([e[1],e[2]]);return o}(),a=/(([^<>()\[\]\\.,;:\s@"%]+(\.[^<>()\[\]\\.,;:\s@"%]+)*)|(".+"))(@|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g,
+            (r=function t(e){if(0===e.length)return window.location.protocol+"//"+window.location.host+window.location.pathname+window.location.hash;
+            for(var o="?",n=0;n<e.length;n++)0<n&&(o=o.concat("&")),o=o.concat(e[n][0]+"="+e[n][1]);
+            return window.location.protocol+"//"+window.location.host+window.location.pathname+o+window.location.hash}
+            (n=n.map(function(t){return t.map(function(t){return(_redactedValue=decodeURIComponent(t).replace(a,o.REDACTION_COPY.EMAIL))===o.REDACTION_COPY.EMAIL?_redactedValue:t})})))!==window.location.href&&
+            window.history.replaceState({},document.title,r),(c=document.title.replace(a,o.REDACTION_COPY.EMAIL))!==document.title&&
+            (document.title=c),i[g].push({event:"piiRedacted"}),(()=>{let t=l.createElement(s);
+               t.async=!0,t.defer=!0,t.onload=()=>h(),t.onerror=p,
+               t.src="https://consent.trustarc.com/notice?domain=twilio.com&c=teconsent&gtm=1&js=nj&noticeType=bb",
+               m.parentNode.insertBefore(t,m)})()}("GTM-MWRD6S");
+      </script>
+		
+	
+
+
+    
+  
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Coder une saisie de numéros de téléphone internationaux_files/widget_iframe.2b2d73daf636805223fb11d48f3e94f7.html" title="Twitter settings iframe" style="display: none;" class=" bf_frame_init"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" name="bf_frame0" src="./Coder une saisie de numéros de téléphone internationaux_files/saved_resource(1).html"></iframe><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./Coder une saisie de numéros de téléphone internationaux_files/anchor.html" width="256" height="60" role="presentation" name="a-qhke14wudx2t" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" class=" bf_frame_init"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" name="bf_frame1" src="./Coder une saisie de numéros de téléphone internationaux_files/saved_resource(2).html"></iframe></div><script type="text/javascript" id="">self._truste_eumap&&dataLayer.push({cm_ctx:"eu",event:"consentManagerLoaded"});dataLayer.push({event:"trustarcLoaded"});var __dispatched__={},__i__=self.postMessage&&setInterval(function(){if(self.PrivacyManagerAPI&&__i__){var b={PrivacyManagerAPI:{action:"getConsentDecision",timestamp:(new Date).getTime(),self:self.location.host}};self.top.postMessage(JSON.stringify(b),"*");__i__=clearInterval(__i__)}},50);
+self.addEventListener("message",function(b,a){try{if(b.data&&(a=JSON.parse(b.data))&&(a=a.PrivacyManagerAPI)&&a.capabilities&&"getConsentDecision"==a.action){var d=self.PrivacyManagerAPI.callApi("getGDPRConsentDecision",self.location.host).consentDecision;d&&d.forEach(function(c){__dispatched__[c]||(self.dataLayer&&self.dataLayer.push({event:"GDPR Pref Allows "+c}),__dispatched__[c]=1)})}}catch(c){}});</script>
+<script type="text/javascript" id="">window.heap=window.heap||[];
+heap.load=function(b,a){window.heap.appid=b;window.heap.config=a=a||{};var c=a.forceSSL||"https:"===document.location.protocol;a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=(c?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+b+".js";b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);b=function(d){return function(){heap.push([d].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty resetIdentity".split(" ");for(c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};heap.load(google_tag_manager["GTM-MWRD6S"].macro(3),{disableTextCapture:!0});google_tag_manager["GTM-MWRD6S"].macro(4)?heap.identify(google_tag_manager["GTM-MWRD6S"].macro(5),"User ID"):heap.identify(google_tag_manager["GTM-MWRD6S"].macro(6),"Visitor Id");</script><script type="text/javascript" id="">var _C={REDACTION_COPY:{EMAIL:"EMAIL_REDACTED"}};function extractParams(){for(var b=[],a,c=/([^&=]+)=?([^&]*)/g,d=window.location.search.substring(1);a=c.exec(d);)b.push([a[1],a[2]]);return b}var urlParams=extractParams(),emailRegex=/(([^<>()\[\]\\.,;:\s@"%]+(\.[^<>()\[\]\\.,;:\s@"%]+)*)|(".+"))(@|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g;
+urlParams=urlParams.map(function(b){return b.map(function(a){_redactedValue=decodeURIComponent(a).replace(emailRegex,_C.REDACTION_COPY.EMAIL);return _redactedValue===_C.REDACTION_COPY.EMAIL?_redactedValue:a})});
+function rewriteURL(b){if(0===b.length)return window.location.protocol+"//"+window.location.host+window.location.pathname+window.location.hash;for(var a="?",c=0;c<b.length;c++)0<c&&(a=a.concat("\x26")),a=a.concat(b[c][0]+"\x3d"+b[c][1]);return window.location.protocol+"//"+window.location.host+window.location.pathname+a+window.location.hash}var newURL=rewriteURL(urlParams);newURL!==window.location.href&&window.history.replaceState({},document.title,newURL);
+var newTitle=document.title.replace(emailRegex,_C.REDACTION_COPY.EMAIL);newTitle!==document.title&&(document.title=newTitle);dataLayer.push({event:"piiRedacted"});</script><div style="display: none; visibility: hidden;">
+<script async="null" src="./Coder une saisie de numéros de téléphone internationaux_files/40532d5df9f288cf593998bcff0654c9.js.téléchargement" data-ch="cheq4ppc" class="ct_clicktrue_25118" data-jsonp="onCheqResponse"></script>
+</div><script type="text/javascript" id="">!function(){var a=window.analytics=window.analytics||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{a.invoked=!0;a.methods="trackSubmit trackClick trackLink trackForm pageview identify reset group track ready alias debug page once off on addSourceMiddleware addIntegrationMiddleware setAnonymousId addDestinationMiddleware".split(" ");a.factory=function(b){return function(){var c=Array.prototype.slice.call(arguments);c.unshift(b);
+a.push(c);return a}};for(var e=0;e<a.methods.length;e++){var f=a.methods[e];a[f]=a.factory(f)}a.load=function(b,c){var d=document.createElement("script");d.type="text/javascript";d.async=!0;d.src="https://cdn.segment.com/analytics.js/v1/"+b+"/analytics.min.js";b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(d,b);a._loadOptions=c};a._writeKey=google_tag_manager["GTM-MWRD6S"].macro(13);a.SNIPPET_VERSION="4.15.3";a.load(google_tag_manager["GTM-MWRD6S"].macro(14))}}();</script><script type="text/javascript" id="">var _kiq=_kiq||[];(function(){setTimeout(function(){var a=document,b=a.getElementsByTagName("script")[0];a=a.createElement("script");a.type="text/javascript";a.async=!0;a.src="//s3.amazonaws.com/ki.js/60855/dM4.js";b.parentNode.insertBefore(a,b)},1)})();"twilio"in window&&twilio.account&&twilio.account.sid&&_kiq.push(["identify",twilio.account.sid]);</script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");"undefined"!==typeof fbq&&(fbq("dataProcessingOptions",[]),fbq("init","1040773425961662"),fbq("track","PageView"));</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1040773425961662&amp;ev=PageView&amp;noscript=1"></noscript>
+
+
+<script type="text/javascript" id="">!function(b,c,d,a){b.twq||(a=b.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1",a.queue=[],t=c.createElement(d),t.async=!0,t.src="//static.ads-twitter.com/uwt.js",s=c.getElementsByTagName(d)[0],s.parentNode.insertBefore(t,s))}(window,document,"script");twq("init","nv97q");twq("track","PageView");</script>
+<script type="text/javascript" id="">var getCookie;
+if("twilio"in window&&(!twilio.user||"full"===twilio.user.access)){getCookie=function(a){var b="; "+document.cookie;a=b.split("; "+a+"\x3d");if(2==a.length)return a.pop().split(";").shift()};var _session_id=getCookie("tw-session-id");_session_id||(document.cookie="tw-session-id\x3d"+Date.now()+Math.random()+";path\x3d/;domain\x3d.twilio.com",_session_id=getCookie("tw-session-id"));var sid="undefined",_sift=window._sift=window._sift||[];_sift.push(["_setAccount","316b238f93"]);_sift.push(["_setUserId",
+sid]);_sift.push(["_setSessionId",_session_id]);_sift.push(["_trackPageview"]);(function(){function a(){var b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.siftscience.com/s.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}window.attachEvent?window.attachEvent("onload",a):window.addEventListener("load",a,!1)})()};</script>
+<script type="text/javascript" id="">var _qevents=_qevents||[];(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://secure":"http://edge")+".quantserve.com/quant.js";a.async=!0;a.type="text/javascript";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();_qevents.push({qacct:"p-efmoRQHrDUXig"});</script>
+<noscript>
+ <img src="//pixel.quantserve.com/pixel/p-efmoRQHrDUXig.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast">
+</noscript>
+
+
+<script type="text/javascript" id="">var bfId="bxIiMMuhVmgMMH42",bfSession=.041666666666666664;(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===document.location.protocol?"https://":"http://")+"munchkin.brightfunnel.com/js/build/bf-munchkin.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<script type="text/javascript" id="">var playerLinks=document.querySelectorAll(".watch-video");if(0<playerLinks.length){var tag=document.createElement("script");tag.src="https://www.youtube.com/iframe_api";var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(tag,firstScriptTag)}
+for(var players=document.querySelectorAll(".video__canvas"),i=0;i<players.length;i++){var playerEl=players[i].getElementsByTagName("video"),playerObj;playerEl&&(player=videojs(playerEl[0].getAttribute("id")))&&(player.on("play",function(){0==Math.floor(player.currentTime())&&dataLayer.push({event:"gtmEvent",eventCategory:"video",eventAction:"video start",eventLabel:player.mediainfo.name})}),player.on("pause",function(){Math.floor(player.currentTime())==Math.floor(player.duration())&&dataLayer.push({event:"gtmEvent",
+eventCategory:"video",eventAction:"video complete",eventLabel:player.mediainfo.name})}))}playerLinks=document.querySelectorAll(".video-content__play-link");
+if(0<playerLinks.length)for(tag=document.createElement("script"),tag.src="https://player.vimeo.com/api/player.js",firstScriptTag=document.getElementsByTagName("script")[0],firstScriptTag.parentNode.insertBefore(tag,firstScriptTag),i=0;i<playerLinks.length;i++){var el=playerLinks[i];el.addEventListener("click",function(b){setTimeout(function(){var d=document.querySelectorAll(".mfp-iframe");d[0].setAttribute("id","vimeoPlayer");var a=new Vimeo.Player("vimeoPlayer");a.on("play",function(){a.started||
+(a.started=!0,a.getVideoTitle().then(function(c){dataLayer.push({event:"gtmEvent",eventCategory:"video",eventAction:"video start",eventLabel:c})})["catch"](function(c){}))});a.on("ended",function(){a.getVideoTitle().then(function(c){dataLayer.push({event:"gtmEvent",eventCategory:"video",eventAction:"video complete",eventLabel:c})})["catch"](function(c){})})},500)})}var vids=document.querySelectorAll(".video-wrapper");
+if(0<vids.length)for(i=0;i<vids.length;i++)if(players=vids[i].getElementsByTagName("video"),0<players.length)for(var j=0;j<players.length;j++){var p=players[j];p.addEventListener("play",function(b){0==Math.floor(b.target.currentTime)&&dataLayer.push({event:"gtmEvent",eventCategory:"video",eventAction:"video start",eventLabel:b.target.currentSrc})});p.addEventListener("ended",function(b){dataLayer.push({event:"gtmEvent",eventCategory:"video",eventAction:"video complete",eventLabel:b.target.currentSrc})})};</script><script type="text/javascript" id="" src="./Coder une saisie de numéros de téléphone internationaux_files/pa-5cc1d870e98940001600009c.js.téléchargement"></script><script type="text/javascript" id="">(function(){function b(){!1===c&&window.Munchkin&&(c=!0,Munchkin.init("294-TKB-300",{asyncOnly:!0}))}var c=!1,a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//munchkin.marketo.net/munchkin.js";a.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||b()};a.onload=b;document.getElementsByTagName("head")[0].appendChild(a)})();</script><script type="text/javascript" id="">window._6si=window._6si||[];window._6si.push(["enableEventTracking",!0]);window._6si.push(["setToken","cd4ba9100b4470e1dde33ce034e651c7"]);window._6si.push(["setEndpoint","b.6sc.co"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//j.6sc.co/6si.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<script type="text/javascript" id="">(function(b,d,e,c,a){b=b[a]=b[a]||{q:[],onReady:function(f){b.q.push(f)}};a=d.createElement(e);a.async=1;a.src=c;c=d.getElementsByTagName(e)[0];c.parentNode.insertBefore(a,c)})(window,document,"script","https://www.datadoghq-browser-agent.com/datadog-rum.js","DD_RUM");DD_RUM.onReady(function(){DD_RUM.init({clientToken:"pub689cfccaa190b67d3943b3ef653aa943",applicationId:"fe59d09c-6f9b-4f42-88c5-47af1b31c64a",site:"datadoghq.com",service:"web-ux",sampleRate:100})});</script>
+<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="./Coder une saisie de numéros de téléphone internationaux_files/saved_resource(3).html" class=" bf_frame_init"></iframe><script type="text/javascript" id="">!function(a,b){if(!a.rdt){var c=a.rdt=function(){c.sendEvent?c.sendEvent.apply(c,arguments):c.callQueue.push(arguments)};c.callQueue=[];a=b.createElement("script");a.src="https://www.redditstatic.com/ads/pixel.js";a.async=!0;b=b.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}}(window,document);rdt("init","t2_i1au5p4");rdt("track","PageVisit");</script> <script type="text/javascript" id="" src="./Coder une saisie de numéros de téléphone internationaux_files/inlinks.js.téléchargement"></script><script type="text/javascript" id="">var analytics=window.analytics=window.analytics||[];analytics.ready(function(){if(google_tag_manager["GTM-MWRD6S"].macro(15)){if(analytics.identify(google_tag_manager["GTM-MWRD6S"].macro(16)),google_tag_manager["GTM-MWRD6S"].macro(17)){analytics.group(google_tag_manager["GTM-MWRD6S"].macro(18));analytics.page({},{context:{groupId:google_tag_manager["GTM-MWRD6S"].macro(19),device:{type:google_tag_manager["GTM-MWRD6S"].macro(20)}}});return}}else if(null!==analytics.user().id()){var a=analytics.user().anonymousId();analytics.reset();analytics.setAnonymousId(a)}analytics.page({},{context:{device:{type:google_tag_manager["GTM-MWRD6S"].macro(21)}}})});</script>
+<script type="text/javascript" id="">window.qp=void 0;!function(d,e,f,a,b,c){d.qp||(a=d.qp=function(){a.qp?a.qp.apply(a,arguments):a.queue.push(arguments)},a.queue=[],b=document.createElement(e),b.async=!0,b.src=f,c=document.getElementsByTagName(e)[0],c.parentNode.insertBefore(b,c))}(window,"script","https://a.quora.com/qevents.js");qp("init","cc9f6acd4b6f42c781dcb0b4a8ce9008");qp("track","ViewContent");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/cc9f6acd4b6f42c781dcb0b4a8ce9008/pixel?tag=ViewContent&amp;noscript=1"></noscript>
+
+<img src="./Coder une saisie de numéros de téléphone internationaux_files/adsct" height="1" width="1" style="display: none;"><img src="./Coder une saisie de numéros de téléphone internationaux_files/adsct(1)" height="1" width="1" style="display: none;"><iframe id="_hjSafeContext_48586671" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./Coder une saisie de numéros de téléphone internationaux_files/saved_resource(4).html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon633505193152"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon688628211970" width="0" height="0" alt="" src="./Coder une saisie de numéros de téléphone internationaux_files/0"></div><iframe id="qualaroo_dnt_frame" src="./Coder une saisie de numéros de téléphone internationaux_files/frame.html" style="width: 1px; height: 1px; display: none; opacity: 0;"></iframe><script type="text/javascript" id="">(function(){heap.track("Scroll Depth",{percent:google_tag_manager["GTM-MWRD6S"].macro(32)})})();</script><script type="text/javascript" id="">(function(){heap.track("Scroll Depth",{percent:google_tag_manager["GTM-MWRD6S"].macro(35)})})();</script></body></html>

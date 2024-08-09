@@ -1,0 +1,29 @@
+I changed my controller and js code: it is work
+
+  public function index(Request $request)
+    {
+       if ($request->ajax()) {
+            $data = Report::with('user','presidents', 'years', 'quarters', 'points')->select('reports.*');
+
+        return Datatables::of($data)
+            // ->addIndexColumn()
+            ->addColumn('created_at', function ($data) {
+                  return jdate($data->created_at)->format('Y-m-d');
+            })
+          ->addColumn('user.image', function ($data) {
+            return ' '.$data->user->image['thumb'].' ';
+           })
+            ->addColumn('action', 'action')
+             ->make(true);
+        }
+
+        return view('reports.index');
+    }
+js code:
+
+{ data: 'user.image', name: 'user.image',
+                    render: function( data, type, full, meta ) {
+                        return "<img src=\"" + data + "\" height=\"50\"/>";
+                    }
+              },
+              ALTER TABLE `cours` ADD `numero_jour` INT(1) NOT NULL DEFAULT '0' AFTER `jour`;
