@@ -91,8 +91,8 @@
             <h3 class="fw-bold">ABSCENCES</h3>
             <div class="d-flex flex-column">
                 <span class="m-1 d-flex align-items-center">
-                    <div class="col-md-4"><b>{{ $abscence->date_absence!=null ? date_formate($abscence->date_absence,"d M Y") :""}}</b></div>
-                    <div class="col-md-6">{{$abscence->motif!=null?$abscence->motif:""}}</div>
+                    <div class="col-md-4"><b>{{ $abscence !=null ? date_formate($abscence->date_absence,"d M Y") :""}}</b></div>
+                    <div class="col-md-6">{{$abscence!=null ? $abscence->motif:""}}</div>
                 </span>
             </div>
             <hr class="my-3">

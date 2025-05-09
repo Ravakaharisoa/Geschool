@@ -57,9 +57,9 @@
                     <hr class="my-3">
                     <h3 class="fw-bold text-primary">ABSCENCES</h3>
                     <div class="flex-column">
-                        <p class="m-3">{{ $abscence->date_absence!=null ? date_formate($abscence->date_absence,"d M Y") :""}} &nbsp;&nbsp;{{$abscence->motif}}</p>
+                        <p class="m-3">{{ $abscence !=null ? date_formate($abscence->date_absence,"d M Y") :""}} &nbsp;&nbsp;{{$abscence != null ? $abscence->motif : ""}}</p>
                     </div>
-            <hr class="my-3">
+                    <hr class="my-3">
                 </div>
                 <div class="col-6 pull-right autre_infos">
                     <div class="row text-center">
